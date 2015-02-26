@@ -23,6 +23,7 @@
     [Sound ding];
     [Sound ping];
     //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
+    [Speecher speak:@"My name is Gann. You may remember me from such television specials as, learning to wakeboard." forGender:@"male"];    
     [self setupBeaconManager];
 }
 
