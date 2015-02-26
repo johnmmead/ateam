@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		96D2EA2476D7B06E7B27F91F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7250CFF1DB8BEE1C67DC0A /* libPods.a */; };
+		9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B2A31A9FAA550017DE80 /* MainViewController.m */; };
 		A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A88D5C8E1A9F9E2800E5A1B9 /* main.m */; };
 		A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A88D5C911A9F9E2800E5A1B9 /* AppDelegate.m */; };
-		A88D5C951A9F9E2800E5A1B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A88D5C941A9F9E2800E5A1B9 /* ViewController.m */; };
 		A88D5C981A9F9E2800E5A1B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88D5C961A9F9E2800E5A1B9 /* Main.storyboard */; };
 		A88D5C9A1A9F9E2800E5A1B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88D5C991A9F9E2800E5A1B9 /* Images.xcassets */; };
 		A88D5C9D1A9F9E2800E5A1B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A88D5C9B1A9F9E2800E5A1B9 /* LaunchScreen.xib */; };
@@ -30,13 +30,15 @@
 /* Begin PBXFileReference section */
 		0592A8496413CA0943AB2F8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7B7250CFF1DB8BEE1C67DC0A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C12B2A21A9FAA550017DE80 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9C12B2A31A9FAA550017DE80 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9C12B2A51A9FAA950017DE80 /* Ateam-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ateam-PrefixHeader.pch"; sourceTree = "<group>"; };
+		9C12B2A61A9FAC810017DE80 /* BeaconLists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconLists.h; sourceTree = "<group>"; };
 		A88D5C891A9F9E2800E5A1B9 /* ateam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ateam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88D5C8D1A9F9E2800E5A1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A88D5C8E1A9F9E2800E5A1B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A88D5C901A9F9E2800E5A1B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A88D5C911A9F9E2800E5A1B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A88D5C931A9F9E2800E5A1B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A88D5C941A9F9E2800E5A1B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A88D5C971A9F9E2800E5A1B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A88D5C991A9F9E2800E5A1B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A88D5C9C1A9F9E2800E5A1B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -99,12 +101,13 @@
 			children = (
 				A88D5C901A9F9E2800E5A1B9 /* AppDelegate.h */,
 				A88D5C911A9F9E2800E5A1B9 /* AppDelegate.m */,
-				A88D5C931A9F9E2800E5A1B9 /* ViewController.h */,
-				A88D5C941A9F9E2800E5A1B9 /* ViewController.m */,
 				A88D5C961A9F9E2800E5A1B9 /* Main.storyboard */,
 				A88D5C991A9F9E2800E5A1B9 /* Images.xcassets */,
 				A88D5C9B1A9F9E2800E5A1B9 /* LaunchScreen.xib */,
 				A88D5C8C1A9F9E2800E5A1B9 /* Supporting Files */,
+				9C12B2A21A9FAA550017DE80 /* MainViewController.h */,
+				9C12B2A31A9FAA550017DE80 /* MainViewController.m */,
+				9C12B2A61A9FAC810017DE80 /* BeaconLists.h */,
 			);
 			path = ateam;
 			sourceTree = "<group>";
@@ -114,6 +117,7 @@
 			children = (
 				A88D5C8D1A9F9E2800E5A1B9 /* Info.plist */,
 				A88D5C8E1A9F9E2800E5A1B9 /* main.m */,
+				9C12B2A51A9FAA950017DE80 /* Ateam-PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -278,8 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88D5C951A9F9E2800E5A1B9 /* ViewController.m in Sources */,
 				A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */,
+				9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */,
 				A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +407,8 @@
 			baseConfigurationReference = 0592A8496413CA0943AB2F8E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ateam/Ateam-PrefixHeader.pch";
 				INFOPLIST_FILE = ateam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +420,8 @@
 			baseConfigurationReference = C0101A28EA9A0E1B31ACCCEF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ateam/Ateam-PrefixHeader.pch";
 				INFOPLIST_FILE = ateam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
