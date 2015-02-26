@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07823A4C1A9FB4DF00AB8C8B /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A4B1A9FB4DF00AB8C8B /* TeamViewController.m */; };
+		07823A611A9FC48600AB8C8B /* Exo-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A4E1A9FC48600AB8C8B /* Exo-Black.otf */; };
+		07823A621A9FC48600AB8C8B /* Exo-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A4F1A9FC48600AB8C8B /* Exo-BlackItalic.otf */; };
+		07823A631A9FC48600AB8C8B /* Exo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A501A9FC48600AB8C8B /* Exo-Bold.otf */; };
+		07823A641A9FC48600AB8C8B /* Exo-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A511A9FC48600AB8C8B /* Exo-BoldItalic.otf */; };
+		07823A651A9FC48600AB8C8B /* Exo-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A521A9FC48600AB8C8B /* Exo-ExtraBold.otf */; };
+		07823A661A9FC48600AB8C8B /* Exo-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A531A9FC48600AB8C8B /* Exo-ExtraBoldItalic.otf */; };
+		07823A671A9FC48600AB8C8B /* Exo-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A541A9FC48600AB8C8B /* Exo-ExtraLight.otf */; };
+		07823A681A9FC48600AB8C8B /* Exo-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A551A9FC48600AB8C8B /* Exo-ExtraLightItalic.otf */; };
+		07823A691A9FC48600AB8C8B /* Exo-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A561A9FC48600AB8C8B /* Exo-Italic.otf */; };
+		07823A6A1A9FC48600AB8C8B /* Exo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A571A9FC48600AB8C8B /* Exo-Light.otf */; };
+		07823A6B1A9FC48600AB8C8B /* Exo-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A581A9FC48600AB8C8B /* Exo-LightItalic.otf */; };
+		07823A6C1A9FC48600AB8C8B /* Exo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A591A9FC48600AB8C8B /* Exo-Medium.otf */; };
+		07823A6D1A9FC48600AB8C8B /* Exo-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A5A1A9FC48600AB8C8B /* Exo-MediumItalic.otf */; };
+		07823A6E1A9FC48600AB8C8B /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A5B1A9FC48600AB8C8B /* Exo-Regular.otf */; };
+		07823A6F1A9FC48600AB8C8B /* Exo-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A5C1A9FC48600AB8C8B /* Exo-SemiBold.otf */; };
+		07823A701A9FC48600AB8C8B /* Exo-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A5D1A9FC48600AB8C8B /* Exo-SemiBoldItalic.otf */; };
+		07823A711A9FC48600AB8C8B /* Exo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A5E1A9FC48600AB8C8B /* Exo-Thin.otf */; };
+		07823A721A9FC48600AB8C8B /* Exo-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A5F1A9FC48600AB8C8B /* Exo-ThinItalic.otf */; };
+		07823A731A9FC48600AB8C8B /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07823A601A9FC48600AB8C8B /* SIL Open Font License.txt */; };
+		07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */; };
 		07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F341A9FA98900196780 /* UIColor+ateam.m */; };
 		07859F381A9FABD200196780 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F371A9FABD200196780 /* GradientView.m */; };
 		96D2EA2476D7B06E7B27F91F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7250CFF1DB8BEE1C67DC0A /* libPods.a */; };
@@ -31,6 +52,29 @@
 
 /* Begin PBXFileReference section */
 		0592A8496413CA0943AB2F8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		07823A4A1A9FB4DF00AB8C8B /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		07823A4B1A9FB4DF00AB8C8B /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		07823A4E1A9FC48600AB8C8B /* Exo-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Black.otf"; sourceTree = "<group>"; };
+		07823A4F1A9FC48600AB8C8B /* Exo-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-BlackItalic.otf"; sourceTree = "<group>"; };
+		07823A501A9FC48600AB8C8B /* Exo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.otf"; sourceTree = "<group>"; };
+		07823A511A9FC48600AB8C8B /* Exo-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-BoldItalic.otf"; sourceTree = "<group>"; };
+		07823A521A9FC48600AB8C8B /* Exo-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-ExtraBold.otf"; sourceTree = "<group>"; };
+		07823A531A9FC48600AB8C8B /* Exo-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		07823A541A9FC48600AB8C8B /* Exo-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-ExtraLight.otf"; sourceTree = "<group>"; };
+		07823A551A9FC48600AB8C8B /* Exo-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		07823A561A9FC48600AB8C8B /* Exo-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Italic.otf"; sourceTree = "<group>"; };
+		07823A571A9FC48600AB8C8B /* Exo-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Light.otf"; sourceTree = "<group>"; };
+		07823A581A9FC48600AB8C8B /* Exo-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-LightItalic.otf"; sourceTree = "<group>"; };
+		07823A591A9FC48600AB8C8B /* Exo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Medium.otf"; sourceTree = "<group>"; };
+		07823A5A1A9FC48600AB8C8B /* Exo-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-MediumItalic.otf"; sourceTree = "<group>"; };
+		07823A5B1A9FC48600AB8C8B /* Exo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.otf"; sourceTree = "<group>"; };
+		07823A5C1A9FC48600AB8C8B /* Exo-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.otf"; sourceTree = "<group>"; };
+		07823A5D1A9FC48600AB8C8B /* Exo-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		07823A5E1A9FC48600AB8C8B /* Exo-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Thin.otf"; sourceTree = "<group>"; };
+		07823A5F1A9FC48600AB8C8B /* Exo-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-ThinItalic.otf"; sourceTree = "<group>"; };
+		07823A601A9FC48600AB8C8B /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		07823A741A9FC5C000AB8C8B /* UIFont+ateam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ateam.h"; sourceTree = "<group>"; };
+		07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ateam.m"; sourceTree = "<group>"; };
 		07859F331A9FA98900196780 /* UIColor+ateam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ateam.h"; sourceTree = "<group>"; };
 		07859F341A9FA98900196780 /* UIColor+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ateam.m"; sourceTree = "<group>"; };
 		07859F361A9FABD200196780 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
@@ -81,11 +125,39 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		07823A4D1A9FC48600AB8C8B /* exo */ = {
+			isa = PBXGroup;
+			children = (
+				07823A4E1A9FC48600AB8C8B /* Exo-Black.otf */,
+				07823A4F1A9FC48600AB8C8B /* Exo-BlackItalic.otf */,
+				07823A501A9FC48600AB8C8B /* Exo-Bold.otf */,
+				07823A511A9FC48600AB8C8B /* Exo-BoldItalic.otf */,
+				07823A521A9FC48600AB8C8B /* Exo-ExtraBold.otf */,
+				07823A531A9FC48600AB8C8B /* Exo-ExtraBoldItalic.otf */,
+				07823A541A9FC48600AB8C8B /* Exo-ExtraLight.otf */,
+				07823A551A9FC48600AB8C8B /* Exo-ExtraLightItalic.otf */,
+				07823A561A9FC48600AB8C8B /* Exo-Italic.otf */,
+				07823A571A9FC48600AB8C8B /* Exo-Light.otf */,
+				07823A581A9FC48600AB8C8B /* Exo-LightItalic.otf */,
+				07823A591A9FC48600AB8C8B /* Exo-Medium.otf */,
+				07823A5A1A9FC48600AB8C8B /* Exo-MediumItalic.otf */,
+				07823A5B1A9FC48600AB8C8B /* Exo-Regular.otf */,
+				07823A5C1A9FC48600AB8C8B /* Exo-SemiBold.otf */,
+				07823A5D1A9FC48600AB8C8B /* Exo-SemiBoldItalic.otf */,
+				07823A5E1A9FC48600AB8C8B /* Exo-Thin.otf */,
+				07823A5F1A9FC48600AB8C8B /* Exo-ThinItalic.otf */,
+				07823A601A9FC48600AB8C8B /* SIL Open Font License.txt */,
+			);
+			path = exo;
+			sourceTree = "<group>";
+		};
 		07859F3F1A9FAE2500196780 /* Category */ = {
 			isa = PBXGroup;
 			children = (
 				07859F331A9FA98900196780 /* UIColor+ateam.h */,
 				07859F341A9FA98900196780 /* UIColor+ateam.m */,
+				07823A741A9FC5C000AB8C8B /* UIFont+ateam.h */,
+				07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -95,6 +167,8 @@
 			children = (
 				9C12B2A21A9FAA550017DE80 /* MainViewController.h */,
 				9C12B2A31A9FAA550017DE80 /* MainViewController.m */,
+				07823A4A1A9FB4DF00AB8C8B /* TeamViewController.h */,
+				07823A4B1A9FB4DF00AB8C8B /* TeamViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -146,6 +220,7 @@
 				07823A491A9FB46B00AB8C8B /* Model */,
 				07859F411A9FAE4400196780 /* View */,
 				07859F401A9FAE3B00196780 /* Controller */,
+				07823A4D1A9FC48600AB8C8B /* exo */,
 				A88D5C961A9F9E2800E5A1B9 /* Main.storyboard */,
 				A88D5C9B1A9F9E2800E5A1B9 /* LaunchScreen.xib */,
 				A88D5C991A9F9E2800E5A1B9 /* Images.xcassets */,
@@ -271,9 +346,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07823A721A9FC48600AB8C8B /* Exo-ThinItalic.otf in Resources */,
+				07823A731A9FC48600AB8C8B /* SIL Open Font License.txt in Resources */,
+				07823A691A9FC48600AB8C8B /* Exo-Italic.otf in Resources */,
+				07823A6F1A9FC48600AB8C8B /* Exo-SemiBold.otf in Resources */,
+				07823A671A9FC48600AB8C8B /* Exo-ExtraLight.otf in Resources */,
+				07823A6A1A9FC48600AB8C8B /* Exo-Light.otf in Resources */,
+				07823A661A9FC48600AB8C8B /* Exo-ExtraBoldItalic.otf in Resources */,
+				07823A701A9FC48600AB8C8B /* Exo-SemiBoldItalic.otf in Resources */,
+				07823A621A9FC48600AB8C8B /* Exo-BlackItalic.otf in Resources */,
+				07823A711A9FC48600AB8C8B /* Exo-Thin.otf in Resources */,
 				A88D5C981A9F9E2800E5A1B9 /* Main.storyboard in Resources */,
 				A88D5C9D1A9F9E2800E5A1B9 /* LaunchScreen.xib in Resources */,
+				07823A611A9FC48600AB8C8B /* Exo-Black.otf in Resources */,
+				07823A681A9FC48600AB8C8B /* Exo-ExtraLightItalic.otf in Resources */,
 				A88D5C9A1A9F9E2800E5A1B9 /* Images.xcassets in Resources */,
+				07823A6E1A9FC48600AB8C8B /* Exo-Regular.otf in Resources */,
+				07823A6C1A9FC48600AB8C8B /* Exo-Medium.otf in Resources */,
+				07823A6D1A9FC48600AB8C8B /* Exo-MediumItalic.otf in Resources */,
+				07823A641A9FC48600AB8C8B /* Exo-BoldItalic.otf in Resources */,
+				07823A651A9FC48600AB8C8B /* Exo-ExtraBold.otf in Resources */,
+				07823A631A9FC48600AB8C8B /* Exo-Bold.otf in Resources */,
+				07823A6B1A9FC48600AB8C8B /* Exo-LightItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,8 +419,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				07859F381A9FABD200196780 /* GradientView.m in Sources */,
+				07823A4C1A9FB4DF00AB8C8B /* TeamViewController.m in Sources */,
 				A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */,
 				9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */,
+				07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */,
 				07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */,
 				A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */,
 			);
