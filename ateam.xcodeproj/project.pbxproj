@@ -30,6 +30,7 @@
 		07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */; };
 		07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F341A9FA98900196780 /* UIColor+ateam.m */; };
 		07859F381A9FABD200196780 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F371A9FABD200196780 /* GradientView.m */; };
+		50BE808D1A9FE4740066A084 /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE808C1A9FE4740066A084 /* SwiftView.swift */; };
 		96D2EA2476D7B06E7B27F91F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7250CFF1DB8BEE1C67DC0A /* libPods.a */; };
 		9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B2A31A9FAA550017DE80 /* MainViewController.m */; };
 		A86DB4431A9FC58100A88647 /* Speecher.m in Sources */ = {isa = PBXBuildFile; fileRef = A86DB4421A9FC58100A88647 /* Speecher.m */; };
@@ -86,6 +87,8 @@
 		07859F341A9FA98900196780 /* UIColor+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ateam.m"; sourceTree = "<group>"; };
 		07859F361A9FABD200196780 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		07859F371A9FABD200196780 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		50BE808B1A9FE4740066A084 /* ateam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ateam-Bridging-Header.h"; sourceTree = "<group>"; };
+		50BE808C1A9FE4740066A084 /* SwiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
 		7B7250CFF1DB8BEE1C67DC0A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C12B2A21A9FAA550017DE80 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		9C12B2A31A9FAA550017DE80 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 			children = (
 				07859F361A9FABD200196780 /* GradientView.h */,
 				07859F371A9FABD200196780 /* GradientView.m */,
+				50BE808C1A9FE4740066A084 /* SwiftView.swift */,
+				50BE808B1A9FE4740066A084 /* ateam-Bridging-Header.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 			files = (
 				07859F381A9FABD200196780 /* GradientView.m in Sources */,
 				07823A4C1A9FB4DF00AB8C8B /* TeamViewController.m in Sources */,
+				50BE808D1A9FE4740066A084 /* SwiftView.swift in Sources */,
 				A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */,
 				A86DB4431A9FC58100A88647 /* Speecher.m in Sources */,
 				A86DB4551A9FCE3700A88647 /* Sound.m in Sources */,
@@ -595,11 +601,14 @@
 			baseConfigurationReference = 0592A8496413CA0943AB2F8E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ateam/Ateam-PrefixHeader.pch";
 				INFOPLIST_FILE = ateam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ateam/ateam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -608,11 +617,13 @@
 			baseConfigurationReference = C0101A28EA9A0E1B31ACCCEF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ateam/Ateam-PrefixHeader.pch";
 				INFOPLIST_FILE = ateam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ateam/ateam-Bridging-Header.h";
 			};
 			name = Release;
 		};
