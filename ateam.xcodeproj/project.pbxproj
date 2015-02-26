@@ -388,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86DB4511A9FCCDC00A88647 /* schwit.aiff in Resources */,
 				07823A721A9FC48600AB8C8B /* Exo-ThinItalic.otf in Resources */,
 				07823A731A9FC48600AB8C8B /* SIL Open Font License.txt in Resources */,
 				07823A691A9FC48600AB8C8B /* Exo-Italic.otf in Resources */,
@@ -400,9 +401,12 @@
 				07823A711A9FC48600AB8C8B /* Exo-Thin.otf in Resources */,
 				A88D5C981A9F9E2800E5A1B9 /* Main.storyboard in Resources */,
 				A88D5C9D1A9F9E2800E5A1B9 /* LaunchScreen.xib in Resources */,
+				A86DB44F1A9FCCDC00A88647 /* nuk.aiff in Resources */,
+				A86DB44E1A9FCCDC00A88647 /* ding.wav in Resources */,
 				07823A611A9FC48600AB8C8B /* Exo-Black.otf in Resources */,
 				07823A681A9FC48600AB8C8B /* Exo-ExtraLightItalic.otf in Resources */,
 				A88D5C9A1A9F9E2800E5A1B9 /* Images.xcassets in Resources */,
+				A86DB4501A9FCCDC00A88647 /* ping.aiff in Resources */,
 				07823A6E1A9FC48600AB8C8B /* Exo-Regular.otf in Resources */,
 				07823A6C1A9FC48600AB8C8B /* Exo-Medium.otf in Resources */,
 				07823A6D1A9FC48600AB8C8B /* Exo-MediumItalic.otf in Resources */,
