@@ -10,14 +10,16 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="a-team" translatesAutoresizingMaskIntoConstraints="NO" id="kyx-Ge-QQ2">
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a-team" translatesAutoresizingMaskIntoConstraints="NO" id="kyx-Ge-QQ2">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.1803921568627451" green="0.039215686274509803" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="kyx-Ge-QQ2" secondAttribute="trailing" id="VJa-Ii-VCA"/>
-                <constraint firstItem="kyx-Ge-QQ2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YDF-e3-2or"/>
+                <constraint firstItem="kyx-Ge-QQ2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6UR-iL-I8U"/>
+                <constraint firstAttribute="bottom" secondItem="kyx-Ge-QQ2" secondAttribute="bottom" id="TDO-0z-nGb"/>
+                <constraint firstAttribute="trailing" secondItem="kyx-Ge-QQ2" secondAttribute="trailing" id="xcE-AH-7Xm"/>
+                <constraint firstItem="kyx-Ge-QQ2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yyv-2a-jcT"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

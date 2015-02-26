@@ -321,6 +321,7 @@
 				A88D5C951A9F9E2800E5A1B9 /* ViewController.m in Sources */,
 				07859F381A9FABD200196780 /* GradientView.m in Sources */,
 				A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */,
+				9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */,
 				07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */,
 				A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */,
 			);
