@@ -28,6 +28,7 @@
 		07823A721A9FC48600AB8C8B /* Exo-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07823A5F1A9FC48600AB8C8B /* Exo-ThinItalic.otf */; };
 		07823A731A9FC48600AB8C8B /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07823A601A9FC48600AB8C8B /* SIL Open Font License.txt */; };
 		07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */; };
+		07823A791A9FDF5E00AB8C8B /* TeamViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A781A9FDF5E00AB8C8B /* TeamViewCell.m */; };
 		07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F341A9FA98900196780 /* UIColor+ateam.m */; };
 		07859F381A9FABD200196780 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F371A9FABD200196780 /* GradientView.m */; };
 		96D2EA2476D7B06E7B27F91F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7250CFF1DB8BEE1C67DC0A /* libPods.a */; };
@@ -82,6 +83,8 @@
 		07823A601A9FC48600AB8C8B /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		07823A741A9FC5C000AB8C8B /* UIFont+ateam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ateam.h"; sourceTree = "<group>"; };
 		07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ateam.m"; sourceTree = "<group>"; };
+		07823A771A9FDF5E00AB8C8B /* TeamViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewCell.h; sourceTree = "<group>"; };
+		07823A781A9FDF5E00AB8C8B /* TeamViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewCell.m; sourceTree = "<group>"; };
 		07859F331A9FA98900196780 /* UIColor+ateam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ateam.h"; sourceTree = "<group>"; };
 		07859F341A9FA98900196780 /* UIColor+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ateam.m"; sourceTree = "<group>"; };
 		07859F361A9FABD200196780 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				9C12B2A31A9FAA550017DE80 /* MainViewController.m */,
 				07823A4A1A9FB4DF00AB8C8B /* TeamViewController.h */,
 				07823A4B1A9FB4DF00AB8C8B /* TeamViewController.m */,
+				07823A771A9FDF5E00AB8C8B /* TeamViewCell.h */,
+				07823A781A9FDF5E00AB8C8B /* TeamViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				A86DB4551A9FCE3700A88647 /* Sound.m in Sources */,
 				9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */,
 				07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */,
+				07823A791A9FDF5E00AB8C8B /* TeamViewCell.m in Sources */,
 				07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */,
 				A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */,
 			);

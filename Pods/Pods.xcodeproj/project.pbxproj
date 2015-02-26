@@ -1,786 +1,2244 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		037CE6A015CE690306082077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B641AF247A1A85D3A740B937 /* Foundation.framework */; };
-		08D913B535982D2A5816D710 /* ESTBeaconUpdateConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDBEE801CD9085AEAA20FEB /* ESTBeaconUpdateConfig.h */; };
-		1594359FE86116A7BAC4CD2C /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597444A5349646DB59E8AD2 /* AwesomeMenuItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		26CD6A538422AB644D37B344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B641AF247A1A85D3A740B937 /* Foundation.framework */; };
-		33529B8435F84D6EA0B0D0A9 /* ESTBeaconManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A817645FBDF8BB422A5D21E /* ESTBeaconManager.h */; };
-		335676E66B2FD240588CDCF1 /* ESTNearableRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EE395807CA9D83D2B1C0BFC /* ESTNearableRule.h */; };
-		3E12DA5E901A9ECA7B962DBF /* Pods-EstimoteSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EC31E45908516DA3B51197 /* Pods-EstimoteSDK-dummy.m */; };
-		3EDDD565FB65BDC6A57921DC /* ESTMotionRule.h in Headers */ = {isa = PBXBuildFile; fileRef = B0721DDA69649DE3A2393BE0 /* ESTMotionRule.h */; };
-		43CD40199068407C58B30F99 /* AwesomeMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = FA6388506BF0A28D61438FA2 /* AwesomeMenu.h */; };
-		4B3301103C3B054988906067 /* ESTBeaconDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 11C9420FCFB5E9BCEEDC8294 /* ESTBeaconDefinitions.h */; };
-		4D8EAC566C68461653ACC0EA /* ESTRule.h in Headers */ = {isa = PBXBuildFile; fileRef = D9085B544511D8B16F2D15C7 /* ESTRule.h */; };
-		532CD051CA1ED23484BA7C6C /* ESTFirmwareInfoVO.h in Headers */ = {isa = PBXBuildFile; fileRef = FC1BC4B7449516E933B571A1 /* ESTFirmwareInfoVO.h */; };
-		58F29837BB4807F5E596DB1C /* ESTBeaconRegion.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DDCBD897C7875CE58AF9759 /* ESTBeaconRegion.h */; };
-		5DF2076A52538D49E6D0D6A7 /* ESTTemperatureRule.h in Headers */ = {isa = PBXBuildFile; fileRef = EC43AD628AC780C9311B992B /* ESTTemperatureRule.h */; };
-		631ADD0ECF98D6481E7C6B5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B641AF247A1A85D3A740B937 /* Foundation.framework */; };
-		769916514A3AB52B3F3924D3 /* Pods-AwesomeMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A9E6DFF98462F39D19CFB /* Pods-AwesomeMenu-dummy.m */; };
-		81CCE29D08D82299879C6882 /* ESTTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = E662966E43023DB817916826 /* ESTTrigger.h */; };
-		8208DC433CCC72565C8CF563 /* ESTNearableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 253E8D22CA8AC86E9E8EDD04 /* ESTNearableManager.h */; };
-		849F9EDF0D14C5BDF7F20460 /* ESTDateRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4258EED894962E8C2A14A4D0 /* ESTDateRule.h */; };
-		872E46021FA82C42BF941E35 /* ESTBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FF799622A5915DF747CA17A /* ESTBeacon.h */; };
-		8B926CC5F9357968E595A9ED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255F89E728F599DA010CD365 /* SystemConfiguration.framework */; };
-		9454EAF0AD67CCB4BB33BE6C /* ESTOrientationRule.h in Headers */ = {isa = PBXBuildFile; fileRef = CE77EB9E0749A26553DC2879 /* ESTOrientationRule.h */; };
-		99511DAF764FD41DDB47557B /* ESTBulkUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A523BB09CDC7EC25722D6D /* ESTBulkUpdater.h */; };
-		B3C695B9F4331D2E9386CD1F /* ESTConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D97473367B08098E9B0CC4C /* ESTConfig.h */; };
-		B6CDA3DCA89F04A83FF574CD /* ESTTriggerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 942AEBE99C8FD8DE5CF302EB /* ESTTriggerManager.h */; };
-		BA04F75246380F9824FC85C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5DA55E56E0BB4DEBB9FAFA /* UIKit.framework */; };
-		C59F15F591E7DE7BCA6C8320 /* AwesomeMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 29F9543E83D57CEB2A945906 /* AwesomeMenuItem.h */; };
-		CAAE01A811A7323CA40161BD /* ESTBeaconFirmwareVO.h in Headers */ = {isa = PBXBuildFile; fileRef = D6CA56EC596DB85338C21684 /* ESTBeaconFirmwareVO.h */; };
-		CCD5131808AA45E2D133E784 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6EF1FB8349E9E8BEA1FBCB /* MobileCoreServices.framework */; };
-		CCEE72BF73A46CCABFAFAE5B /* ESTProximityRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D745190D16A48411FD2B81D /* ESTProximityRule.h */; };
-		DB088DFE1C6004105F720752 /* ESTNearable.h in Headers */ = {isa = PBXBuildFile; fileRef = A4FBE6D685E7B0787C1AB286 /* ESTNearable.h */; };
-		DB4D639EAFF34A79698DC683 /* ESTNearableDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 61593E5D36CFF0E005CA1F67 /* ESTNearableDefinitions.h */; };
-		DD76B112F8293090FBA8C815 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD3C48764B6027FBE40E625 /* CoreLocation.framework */; };
-		EF701D94CD60057C0813ADE4 /* ESTBeaconVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 34DBDB3D689CFC6522B4083A /* ESTBeaconVO.h */; };
-		F01A1B4238CC89BD592F858D /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D76D405BB301781DAD9C516C /* AwesomeMenu.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F34CB416423F0EDD217A6599 /* ESTBeaconUpdateInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C099D6F765CD0E3EED70F9 /* ESTBeaconUpdateInfo.h */; };
-		F8249F26BF0D2C379E0F8912 /* ESTDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E2322AE1690B4C053F68173 /* ESTDefinitions.h */; };
-		FDBC2BB38236D1ED24D25C75 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C204A9191DC0697BF21105 /* Pods-dummy.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		23FE0D8351CC59E61F84203C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A1A5F4F8AE88044A7D39DA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2DA3DF91413933D864DD784A;
-			remoteInfo = "Pods-AwesomeMenu";
-		};
-		CDAD176A0B3F24226A9C86BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A1A5F4F8AE88044A7D39DA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A49F304D317F3B51F454E9B7;
-			remoteInfo = "Pods-EstimoteSDK";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		00C099D6F765CD0E3EED70F9 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconUpdateInfo.h; path = EstimoteSDK/Headers/ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
-		00C41A363304A2896BFF715D /* bg-addbutton@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-addbutton@2x.png"; path = "AwesomeMenu/Images/bg-addbutton@2x.png"; sourceTree = "<group>"; };
-		0311B8F91A4A3E08DFC1CE52 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		081345E48D4FFF4AFB6F5567 /* Pods-AwesomeMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeMenu-Private.xcconfig"; sourceTree = "<group>"; };
-		0FF799622A5915DF747CA17A /* ESTBeacon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeacon.h; path = EstimoteSDK/Headers/ESTBeacon.h; sourceTree = "<group>"; };
-		11C9420FCFB5E9BCEEDC8294 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconDefinitions.h; path = EstimoteSDK/Headers/ESTBeaconDefinitions.h; sourceTree = "<group>"; };
-		1B0BEED5AFCFC6BE1AD20D7E /* bg-addbutton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-addbutton.png"; path = "AwesomeMenu/Images/bg-addbutton.png"; sourceTree = "<group>"; };
-		1EE395807CA9D83D2B1C0BFC /* ESTNearableRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTNearableRule.h; path = EstimoteSDK/Headers/ESTNearableRule.h; sourceTree = "<group>"; };
-		21C0E543689BACB93EF39BAD /* Pods-EstimoteSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EstimoteSDK-prefix.pch"; sourceTree = "<group>"; };
-		253E8D22CA8AC86E9E8EDD04 /* ESTNearableManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTNearableManager.h; path = EstimoteSDK/Headers/ESTNearableManager.h; sourceTree = "<group>"; };
-		255F89E728F599DA010CD365 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		29F9543E83D57CEB2A945906 /* AwesomeMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AwesomeMenuItem.h; path = AwesomeMenu/AwesomeMenu/AwesomeMenuItem.h; sourceTree = "<group>"; };
-		2D97473367B08098E9B0CC4C /* ESTConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTConfig.h; path = EstimoteSDK/Headers/ESTConfig.h; sourceTree = "<group>"; };
-		34DBDB3D689CFC6522B4083A /* ESTBeaconVO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconVO.h; path = EstimoteSDK/Headers/ESTBeaconVO.h; sourceTree = "<group>"; };
-		385478D3FDBAA28DEB78DF41 /* Pods-EstimoteSDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EstimoteSDK-Private.xcconfig"; sourceTree = "<group>"; };
-		4258EED894962E8C2A14A4D0 /* ESTDateRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTDateRule.h; path = EstimoteSDK/Headers/ESTDateRule.h; sourceTree = "<group>"; };
-		49A523BB09CDC7EC25722D6D /* ESTBulkUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBulkUpdater.h; path = EstimoteSDK/Headers/ESTBulkUpdater.h; sourceTree = "<group>"; };
-		4A817645FBDF8BB422A5D21E /* ESTBeaconManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconManager.h; path = EstimoteSDK/Headers/ESTBeaconManager.h; sourceTree = "<group>"; };
-		4D745190D16A48411FD2B81D /* ESTProximityRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTProximityRule.h; path = EstimoteSDK/Headers/ESTProximityRule.h; sourceTree = "<group>"; };
-		540361BAD7845E6CFC7E1E52 /* bg-menuitem-highlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-menuitem-highlighted.png"; path = "AwesomeMenu/Images/bg-menuitem-highlighted.png"; sourceTree = "<group>"; };
-		55E3AECAFE5448ECCB2D9D14 /* icon-plus-highlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon-plus-highlighted@2x.png"; path = "AwesomeMenu/Images/icon-plus-highlighted@2x.png"; sourceTree = "<group>"; };
-		61593E5D36CFF0E005CA1F67 /* ESTNearableDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTNearableDefinitions.h; path = EstimoteSDK/Headers/ESTNearableDefinitions.h; sourceTree = "<group>"; };
-		66D0C6EBF155CFA357BE60EC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		683449F4BCF9E5D1222899B5 /* bg-menuitem@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-menuitem@2x.png"; path = "AwesomeMenu/Images/bg-menuitem@2x.png"; sourceTree = "<group>"; };
-		6A2DFF223655112D6AAEFEEB /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		71DF3D948D30D71C09E1EBB1 /* libPods-EstimoteSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EstimoteSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74E19784829D6CB8116D133B /* bg-addbutton-highlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-addbutton-highlighted.png"; path = "AwesomeMenu/Images/bg-addbutton-highlighted.png"; sourceTree = "<group>"; };
-		7597444A5349646DB59E8AD2 /* AwesomeMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AwesomeMenuItem.m; path = AwesomeMenu/AwesomeMenu/AwesomeMenuItem.m; sourceTree = "<group>"; };
-		76E9E5F7A04AA5F876D005B1 /* icon-plus-highlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon-plus-highlighted.png"; path = "AwesomeMenu/Images/icon-plus-highlighted.png"; sourceTree = "<group>"; };
-		78D5B0C6B4460017F8415B9B /* bg-menuitem-highlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-menuitem-highlighted@2x.png"; path = "AwesomeMenu/Images/bg-menuitem-highlighted@2x.png"; sourceTree = "<group>"; };
-		794343249B285681AEE16F0E /* Pods-AwesomeMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AwesomeMenu-prefix.pch"; sourceTree = "<group>"; };
-		7DDBEE801CD9085AEAA20FEB /* ESTBeaconUpdateConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconUpdateConfig.h; path = EstimoteSDK/Headers/ESTBeaconUpdateConfig.h; sourceTree = "<group>"; };
-		7E2322AE1690B4C053F68173 /* ESTDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTDefinitions.h; path = EstimoteSDK/Headers/ESTDefinitions.h; sourceTree = "<group>"; };
-		802303A854E59EFB76A6F157 /* icon-plus@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon-plus@2x.png"; path = "AwesomeMenu/Images/icon-plus@2x.png"; sourceTree = "<group>"; };
-		83C204A9191DC0697BF21105 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		85485594E5AF9F130C8547D2 /* bg-menuitem.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-menuitem.png"; path = "AwesomeMenu/Images/bg-menuitem.png"; sourceTree = "<group>"; };
-		8B6EF1FB8349E9E8BEA1FBCB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		8F4E784812FD3EF2359DCD89 /* libPods-AwesomeMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		942AEBE99C8FD8DE5CF302EB /* ESTTriggerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTTriggerManager.h; path = EstimoteSDK/Headers/ESTTriggerManager.h; sourceTree = "<group>"; };
-		95D4C290FE6E370BA6F40418 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		96EC31E45908516DA3B51197 /* Pods-EstimoteSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EstimoteSDK-dummy.m"; sourceTree = "<group>"; };
-		9C2974178BB2C2F4E4BBA767 /* icon-star@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon-star@2x.png"; path = "AwesomeMenu/Images/icon-star@2x.png"; sourceTree = "<group>"; };
-		9DDCBD897C7875CE58AF9759 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconRegion.h; path = EstimoteSDK/Headers/ESTBeaconRegion.h; sourceTree = "<group>"; };
-		9F233EBE618878CD6B0AA4AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		A4FBE6D685E7B0787C1AB286 /* ESTNearable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTNearable.h; path = EstimoteSDK/Headers/ESTNearable.h; sourceTree = "<group>"; };
-		ACE6360842432C5973AB37DE /* Pods-EstimoteSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EstimoteSDK.xcconfig"; sourceTree = "<group>"; };
-		ADD3C48764B6027FBE40E625 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		B0721DDA69649DE3A2393BE0 /* ESTMotionRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTMotionRule.h; path = EstimoteSDK/Headers/ESTMotionRule.h; sourceTree = "<group>"; };
-		B641AF247A1A85D3A740B937 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C0232F3453669F5A19D0B38A /* libEstimoteSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
-		C64B33B068E5693EE8ECF1A4 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		CE39E7585A456470DD17782D /* icon-plus.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon-plus.png"; path = "AwesomeMenu/Images/icon-plus.png"; sourceTree = "<group>"; };
-		CE77EB9E0749A26553DC2879 /* ESTOrientationRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTOrientationRule.h; path = EstimoteSDK/Headers/ESTOrientationRule.h; sourceTree = "<group>"; };
-		CFC171F602D5EDE429E4D06B /* icon-star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon-star.png"; path = "AwesomeMenu/Images/icon-star.png"; sourceTree = "<group>"; };
-		D4485CF14840A77792EFDF9C /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D4F445BBED2C83E5B8AAB0BB /* Pods-AwesomeMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeMenu.xcconfig"; sourceTree = "<group>"; };
-		D6CA56EC596DB85338C21684 /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconFirmwareVO.h; path = EstimoteSDK/Headers/ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
-		D76D405BB301781DAD9C516C /* AwesomeMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AwesomeMenu.m; path = AwesomeMenu/AwesomeMenu/AwesomeMenu.m; sourceTree = "<group>"; };
-		D9085B544511D8B16F2D15C7 /* ESTRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTRule.h; path = EstimoteSDK/Headers/ESTRule.h; sourceTree = "<group>"; };
-		E662966E43023DB817916826 /* ESTTrigger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTTrigger.h; path = EstimoteSDK/Headers/ESTTrigger.h; sourceTree = "<group>"; };
-		E796154B8B27E15069CF4B1A /* bg-addbutton-highlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bg-addbutton-highlighted@2x.png"; path = "AwesomeMenu/Images/bg-addbutton-highlighted@2x.png"; sourceTree = "<group>"; };
-		EC43AD628AC780C9311B992B /* ESTTemperatureRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTTemperatureRule.h; path = EstimoteSDK/Headers/ESTTemperatureRule.h; sourceTree = "<group>"; };
-		EE5DA55E56E0BB4DEBB9FAFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EFB5619031716A755D0609F8 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F69A9E6DFF98462F39D19CFB /* Pods-AwesomeMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AwesomeMenu-dummy.m"; sourceTree = "<group>"; };
-		FA6388506BF0A28D61438FA2 /* AwesomeMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AwesomeMenu.h; path = AwesomeMenu/AwesomeMenu/AwesomeMenu.h; sourceTree = "<group>"; };
-		FC1BC4B7449516E933B571A1 /* ESTFirmwareInfoVO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTFirmwareInfoVO.h; path = EstimoteSDK/Headers/ESTFirmwareInfoVO.h; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		0AEEA6A588A3CF2A209A66C1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				037CE6A015CE690306082077 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4B186DAC2EC8EE83E74CE809 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				631ADD0ECF98D6481E7C6B5D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6C70E814DD432F3ED1D2CF21 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD76B112F8293090FBA8C815 /* CoreLocation.framework in Frameworks */,
-				26CD6A538422AB644D37B344 /* Foundation.framework in Frameworks */,
-				CCD5131808AA45E2D133E784 /* MobileCoreServices.framework in Frameworks */,
-				8B926CC5F9357968E595A9ED /* SystemConfiguration.framework in Frameworks */,
-				BA04F75246380F9824FC85C2 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		121670841E701BE20DA21197 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				ADD3C48764B6027FBE40E625 /* CoreLocation.framework */,
-				B641AF247A1A85D3A740B937 /* Foundation.framework */,
-				8B6EF1FB8349E9E8BEA1FBCB /* MobileCoreServices.framework */,
-				255F89E728F599DA010CD365 /* SystemConfiguration.framework */,
-				EE5DA55E56E0BB4DEBB9FAFA /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		2B1FE758B2425B9A7E17FE24 = {
-			isa = PBXGroup;
-			children = (
-				D4485CF14840A77792EFDF9C /* Podfile */,
-				79809502AFBCB25D640EC08D /* Frameworks */,
-				CC9EE25893735B671FCF433B /* Pods */,
-				60CD29990659DBD138F20746 /* Products */,
-				37608708996DF976CDCB0178 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		37608708996DF976CDCB0178 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7333D4157500C966CEF7633 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		50C5F9B057CAC472CC58B4C9 /* AwesomeMenu */ = {
-			isa = PBXGroup;
-			children = (
-				FA6388506BF0A28D61438FA2 /* AwesomeMenu.h */,
-				D76D405BB301781DAD9C516C /* AwesomeMenu.m */,
-				29F9543E83D57CEB2A945906 /* AwesomeMenuItem.h */,
-				7597444A5349646DB59E8AD2 /* AwesomeMenuItem.m */,
-				66D12F9EEB1C1DA06BF8F5B4 /* Resources */,
-				F4EEE05F8AFB2746BB0D981C /* Support Files */,
-			);
-			path = AwesomeMenu;
-			sourceTree = "<group>";
-		};
-		60CD29990659DBD138F20746 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				95D4C290FE6E370BA6F40418 /* libPods.a */,
-				8F4E784812FD3EF2359DCD89 /* libPods-AwesomeMenu.a */,
-				71DF3D948D30D71C09E1EBB1 /* libPods-EstimoteSDK.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		66D12F9EEB1C1DA06BF8F5B4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1B0BEED5AFCFC6BE1AD20D7E /* bg-addbutton.png */,
-				74E19784829D6CB8116D133B /* bg-addbutton-highlighted.png */,
-				E796154B8B27E15069CF4B1A /* bg-addbutton-highlighted@2x.png */,
-				00C41A363304A2896BFF715D /* bg-addbutton@2x.png */,
-				85485594E5AF9F130C8547D2 /* bg-menuitem.png */,
-				540361BAD7845E6CFC7E1E52 /* bg-menuitem-highlighted.png */,
-				78D5B0C6B4460017F8415B9B /* bg-menuitem-highlighted@2x.png */,
-				683449F4BCF9E5D1222899B5 /* bg-menuitem@2x.png */,
-				CE39E7585A456470DD17782D /* icon-plus.png */,
-				76E9E5F7A04AA5F876D005B1 /* icon-plus-highlighted.png */,
-				55E3AECAFE5448ECCB2D9D14 /* icon-plus-highlighted@2x.png */,
-				802303A854E59EFB76A6F157 /* icon-plus@2x.png */,
-				CFC171F602D5EDE429E4D06B /* icon-star.png */,
-				9C2974178BB2C2F4E4BBA767 /* icon-star@2x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		79809502AFBCB25D640EC08D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				121670841E701BE20DA21197 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C7333D4157500C966CEF7633 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EFB5619031716A755D0609F8 /* Pods-acknowledgements.markdown */,
-				C64B33B068E5693EE8ECF1A4 /* Pods-acknowledgements.plist */,
-				83C204A9191DC0697BF21105 /* Pods-dummy.m */,
-				6A2DFF223655112D6AAEFEEB /* Pods-environment.h */,
-				0311B8F91A4A3E08DFC1CE52 /* Pods-resources.sh */,
-				66D0C6EBF155CFA357BE60EC /* Pods.debug.xcconfig */,
-				9F233EBE618878CD6B0AA4AA /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			path = "Target Support Files/Pods";
-			sourceTree = "<group>";
-		};
-		CC9EE25893735B671FCF433B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				50C5F9B057CAC472CC58B4C9 /* AwesomeMenu */,
-				F064899CF152851401E81A59 /* EstimoteSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		CDF1274F63406A8CAB73CACD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C0232F3453669F5A19D0B38A /* libEstimoteSDK.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D39067E6F1BE6454E29AAD55 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				ACE6360842432C5973AB37DE /* Pods-EstimoteSDK.xcconfig */,
-				385478D3FDBAA28DEB78DF41 /* Pods-EstimoteSDK-Private.xcconfig */,
-				96EC31E45908516DA3B51197 /* Pods-EstimoteSDK-dummy.m */,
-				21C0E543689BACB93EF39BAD /* Pods-EstimoteSDK-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-EstimoteSDK";
-			sourceTree = "<group>";
-		};
-		F064899CF152851401E81A59 /* EstimoteSDK */ = {
-			isa = PBXGroup;
-			children = (
-				0FF799622A5915DF747CA17A /* ESTBeacon.h */,
-				11C9420FCFB5E9BCEEDC8294 /* ESTBeaconDefinitions.h */,
-				D6CA56EC596DB85338C21684 /* ESTBeaconFirmwareVO.h */,
-				4A817645FBDF8BB422A5D21E /* ESTBeaconManager.h */,
-				9DDCBD897C7875CE58AF9759 /* ESTBeaconRegion.h */,
-				7DDBEE801CD9085AEAA20FEB /* ESTBeaconUpdateConfig.h */,
-				00C099D6F765CD0E3EED70F9 /* ESTBeaconUpdateInfo.h */,
-				34DBDB3D689CFC6522B4083A /* ESTBeaconVO.h */,
-				49A523BB09CDC7EC25722D6D /* ESTBulkUpdater.h */,
-				2D97473367B08098E9B0CC4C /* ESTConfig.h */,
-				4258EED894962E8C2A14A4D0 /* ESTDateRule.h */,
-				7E2322AE1690B4C053F68173 /* ESTDefinitions.h */,
-				FC1BC4B7449516E933B571A1 /* ESTFirmwareInfoVO.h */,
-				B0721DDA69649DE3A2393BE0 /* ESTMotionRule.h */,
-				A4FBE6D685E7B0787C1AB286 /* ESTNearable.h */,
-				61593E5D36CFF0E005CA1F67 /* ESTNearableDefinitions.h */,
-				253E8D22CA8AC86E9E8EDD04 /* ESTNearableManager.h */,
-				1EE395807CA9D83D2B1C0BFC /* ESTNearableRule.h */,
-				CE77EB9E0749A26553DC2879 /* ESTOrientationRule.h */,
-				4D745190D16A48411FD2B81D /* ESTProximityRule.h */,
-				D9085B544511D8B16F2D15C7 /* ESTRule.h */,
-				EC43AD628AC780C9311B992B /* ESTTemperatureRule.h */,
-				E662966E43023DB817916826 /* ESTTrigger.h */,
-				942AEBE99C8FD8DE5CF302EB /* ESTTriggerManager.h */,
-				CDF1274F63406A8CAB73CACD /* Frameworks */,
-				D39067E6F1BE6454E29AAD55 /* Support Files */,
-			);
-			path = EstimoteSDK;
-			sourceTree = "<group>";
-		};
-		F4EEE05F8AFB2746BB0D981C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D4F445BBED2C83E5B8AAB0BB /* Pods-AwesomeMenu.xcconfig */,
-				081345E48D4FFF4AFB6F5567 /* Pods-AwesomeMenu-Private.xcconfig */,
-				F69A9E6DFF98462F39D19CFB /* Pods-AwesomeMenu-dummy.m */,
-				794343249B285681AEE16F0E /* Pods-AwesomeMenu-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-AwesomeMenu";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		44DE2B4060B69CC89A8DCE6B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43CD40199068407C58B30F99 /* AwesomeMenu.h in Headers */,
-				C59F15F591E7DE7BCA6C8320 /* AwesomeMenuItem.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		48AA1883C098AC46C0DD513C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				872E46021FA82C42BF941E35 /* ESTBeacon.h in Headers */,
-				4B3301103C3B054988906067 /* ESTBeaconDefinitions.h in Headers */,
-				CAAE01A811A7323CA40161BD /* ESTBeaconFirmwareVO.h in Headers */,
-				33529B8435F84D6EA0B0D0A9 /* ESTBeaconManager.h in Headers */,
-				58F29837BB4807F5E596DB1C /* ESTBeaconRegion.h in Headers */,
-				08D913B535982D2A5816D710 /* ESTBeaconUpdateConfig.h in Headers */,
-				F34CB416423F0EDD217A6599 /* ESTBeaconUpdateInfo.h in Headers */,
-				EF701D94CD60057C0813ADE4 /* ESTBeaconVO.h in Headers */,
-				99511DAF764FD41DDB47557B /* ESTBulkUpdater.h in Headers */,
-				B3C695B9F4331D2E9386CD1F /* ESTConfig.h in Headers */,
-				849F9EDF0D14C5BDF7F20460 /* ESTDateRule.h in Headers */,
-				F8249F26BF0D2C379E0F8912 /* ESTDefinitions.h in Headers */,
-				532CD051CA1ED23484BA7C6C /* ESTFirmwareInfoVO.h in Headers */,
-				3EDDD565FB65BDC6A57921DC /* ESTMotionRule.h in Headers */,
-				DB088DFE1C6004105F720752 /* ESTNearable.h in Headers */,
-				DB4D639EAFF34A79698DC683 /* ESTNearableDefinitions.h in Headers */,
-				8208DC433CCC72565C8CF563 /* ESTNearableManager.h in Headers */,
-				335676E66B2FD240588CDCF1 /* ESTNearableRule.h in Headers */,
-				9454EAF0AD67CCB4BB33BE6C /* ESTOrientationRule.h in Headers */,
-				CCEE72BF73A46CCABFAFAE5B /* ESTProximityRule.h in Headers */,
-				4D8EAC566C68461653ACC0EA /* ESTRule.h in Headers */,
-				5DF2076A52538D49E6D0D6A7 /* ESTTemperatureRule.h in Headers */,
-				81CCE29D08D82299879C6882 /* ESTTrigger.h in Headers */,
-				B6CDA3DCA89F04A83FF574CD /* ESTTriggerManager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		0C677426C62096C772A38B43 /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2424D871F84D0B907EA05ECB /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				BA566DE9965F25A3D41608F3 /* Sources */,
-				4B186DAC2EC8EE83E74CE809 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				590319588C0CA80236C7183C /* PBXTargetDependency */,
-				51DD97DA05DF1FCBB39890BC /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 95D4C290FE6E370BA6F40418 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		2DA3DF91413933D864DD784A /* Pods-AwesomeMenu */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6B1891E93DF83F7CEF21DA2B /* Build configuration list for PBXNativeTarget "Pods-AwesomeMenu" */;
-			buildPhases = (
-				00A6B1E0CB029991FFDBFA1A /* Sources */,
-				0AEEA6A588A3CF2A209A66C1 /* Frameworks */,
-				44DE2B4060B69CC89A8DCE6B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-AwesomeMenu";
-			productName = "Pods-AwesomeMenu";
-			productReference = 8F4E784812FD3EF2359DCD89 /* libPods-AwesomeMenu.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A49F304D317F3B51F454E9B7 /* Pods-EstimoteSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CC10D795EDF35C6CF3B8FF51 /* Build configuration list for PBXNativeTarget "Pods-EstimoteSDK" */;
-			buildPhases = (
-				95469B5EB54E213881672C23 /* Sources */,
-				6C70E814DD432F3ED1D2CF21 /* Frameworks */,
-				48AA1883C098AC46C0DD513C /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-EstimoteSDK";
-			productName = "Pods-EstimoteSDK";
-			productReference = 71DF3D948D30D71C09E1EBB1 /* libPods-EstimoteSDK.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		4A1A5F4F8AE88044A7D39DA9 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0510;
-			};
-			buildConfigurationList = 72020703A864A88D63E8AB6C /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 2B1FE758B2425B9A7E17FE24;
-			productRefGroup = 60CD29990659DBD138F20746 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				0C677426C62096C772A38B43 /* Pods */,
-				2DA3DF91413933D864DD784A /* Pods-AwesomeMenu */,
-				A49F304D317F3B51F454E9B7 /* Pods-EstimoteSDK */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		00A6B1E0CB029991FFDBFA1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F01A1B4238CC89BD592F858D /* AwesomeMenu.m in Sources */,
-				1594359FE86116A7BAC4CD2C /* AwesomeMenuItem.m in Sources */,
-				769916514A3AB52B3F3924D3 /* Pods-AwesomeMenu-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95469B5EB54E213881672C23 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E12DA5E901A9ECA7B962DBF /* Pods-EstimoteSDK-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BA566DE9965F25A3D41608F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDBC2BB38236D1ED24D25C75 /* Pods-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		51DD97DA05DF1FCBB39890BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-EstimoteSDK";
-			target = A49F304D317F3B51F454E9B7 /* Pods-EstimoteSDK */;
-			targetProxy = CDAD176A0B3F24226A9C86BD /* PBXContainerItemProxy */;
-		};
-		590319588C0CA80236C7183C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AwesomeMenu";
-			target = 2DA3DF91413933D864DD784A /* Pods-AwesomeMenu */;
-			targetProxy = 23FE0D8351CC59E61F84203C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		0A07240C27A5F8FE02B3518D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 385478D3FDBAA28DEB78DF41 /* Pods-EstimoteSDK-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-EstimoteSDK/Pods-EstimoteSDK-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		42E579868AAD080240EC0E95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		84666124DE8EB9E9B164F4C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 081345E48D4FFF4AFB6F5567 /* Pods-AwesomeMenu-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AwesomeMenu/Pods-AwesomeMenu-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9F7F72B58B9FD24383806E6F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 385478D3FDBAA28DEB78DF41 /* Pods-EstimoteSDK-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-EstimoteSDK/Pods-EstimoteSDK-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		AB31B98C9D356D6D699AADC1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 081345E48D4FFF4AFB6F5567 /* Pods-AwesomeMenu-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AwesomeMenu/Pods-AwesomeMenu-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D9E75107752B4FFECE33F3A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-			};
-			name = Debug;
-		};
-		E0C15B588E90EDB157A59784 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66D0C6EBF155CFA357BE60EC /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E5F07CB4CD4A1B2107893548 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F233EBE618878CD6B0AA4AA /* Pods.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		2424D871F84D0B907EA05ECB /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E0C15B588E90EDB157A59784 /* Debug */,
-				E5F07CB4CD4A1B2107893548 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6B1891E93DF83F7CEF21DA2B /* Build configuration list for PBXNativeTarget "Pods-AwesomeMenu" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB31B98C9D356D6D699AADC1 /* Debug */,
-				84666124DE8EB9E9B164F4C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		72020703A864A88D63E8AB6C /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9E75107752B4FFECE33F3A7 /* Debug */,
-				42E579868AAD080240EC0E95 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CC10D795EDF35C6CF3B8FF51 /* Build configuration list for PBXNativeTarget "Pods-EstimoteSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A07240C27A5F8FE02B3518D /* Debug */,
-				9F7F72B58B9FD24383806E6F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 4A1A5F4F8AE88044A7D39DA9 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0010ECC3D8C9F2CCE3DD339B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0126978A6884933486C391EA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>26B74D4D069659155552ACC3</string>
+				<string>787226CBC4107C21B69A3451</string>
+				<string>230824310076124464EA2383</string>
+				<string>C7113B3AB5F45CA6DCA81A7C</string>
+				<string>5ADB408A0BA15AC95DAAD768</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>014DD97BAF7654F24C74CB85</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeaconRegion.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeaconRegion.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0194B918CFFD60A10FD74661</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-AwesomeMenu.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>045588E3AB3D1FB8212A2205</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0A23824038F38E308CA8C987</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AwesomeMenuItem.h</string>
+			<key>path</key>
+			<string>AwesomeMenu/AwesomeMenu/AwesomeMenuItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0E171139AF6698853BAB190A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTDefinitions.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTDefinitions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F266BE7D5927F438C56158D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>25B562760B8652AB20667EBB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FE2A4C989AB57D12335F51A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>709F0F0F79F178BC206C18E0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>16C0679D48791E16D9913709</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8EF7F22BA2EAAC3457E7B576</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>16CDBD921F50F2E65D1582AC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>263BDB0953624BF1790FD9FA</string>
+				<string>5E7D6F8F939BAB612AC3C934</string>
+				<string>709F0F0F79F178BC206C18E0</string>
+				<string>E6DDF2086BB7A77B1AAD316F</string>
+				<string>0010ECC3D8C9F2CCE3DD339B</string>
+				<string>1CB55A1F3196874696BDF370</string>
+				<string>B2C8493C8D394665CB7AEFEF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>path</key>
+			<string>Target Support Files/Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1AB458318164B9AB21DE9326</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeaconDefinitions.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeaconDefinitions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B3186B5513A2452A66D433D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8F9363FEA6F135DC5B8EAD44</string>
+				<string>8A8E69BDBEE1528D13EC32B2</string>
+				<string>EDA45A6A1890F3E8CA3537E2</string>
+				<string>65C252B02CA214FD80838E57</string>
+				<string>44B91A1B1C9D80A6D844A0A3</string>
+				<string>6C74C5B01BAB144AB12AFEC0</string>
+				<string>69E8C6E0D11A9F964B361470</string>
+				<string>F8315F539881CDE7620F4C86</string>
+				<string>2CCED701AD77E13093071675</string>
+				<string>644276CC4D6EF31C58CA3F0A</string>
+				<string>EDBD73C67574A526E75A2149</string>
+				<string>67461F4F0B4081A9B730741C</string>
+				<string>215453A5E46076FC291B816F</string>
+				<string>5C7A1332846F8B2CF034ECBB</string>
+				<string>38A2ED1290EFE455787C27A0</string>
+				<string>942540CEC1D6DCDF2ECD7400</string>
+				<string>DE9FFE47AF2D4270F7D83821</string>
+				<string>28BBE55280EF94A7251DE6E4</string>
+				<string>0F266BE7D5927F438C56158D</string>
+				<string>FBDA3BBEB98302F96A45A792</string>
+				<string>8047898B4EFFECE1F2B3C289</string>
+				<string>29CBC5B184FC59BF3794D36E</string>
+				<string>3636526695CCC639065983EA</string>
+				<string>68142566EF5E6F86C1289835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1CB55A1F3196874696BDF370</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>215453A5E46076FC291B816F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>652D2DF82CF39DA261BCA481</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>230824310076124464EA2383</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MobileCoreServices.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>240C7BF43A052D437813CE2B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>60719A5B8F560A3EB85EC932</string>
+				<string>30231843A5E1DCE1ABD30004</string>
+				<string>E9E0EA8BB2D8A501B12F3C00</string>
+				<string>F2EDAA41611B95839B8E48FB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-AwesomeMenu</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>25B562760B8652AB20667EBB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTOrientationRule.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTOrientationRule.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>25BC9A84FFCD3FAB69C476FF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>54F4CAC9EDCE3CD9745E3F41</string>
+				<string>0194B918CFFD60A10FD74661</string>
+				<string>40D1B367CC5B2A04C2B59B68</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>263BDB0953624BF1790FD9FA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>26B74D4D069659155552ACC3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreLocation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreLocation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>2750E126A2B9662BEADAC686</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>28BBE55280EF94A7251DE6E4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>66511579410E801CECBD98AB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>29512520D4F43CBC77FFA2DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-AwesomeMenu</string>
+			<key>target</key>
+			<string>B465E675BF01923217470466</string>
+			<key>targetProxy</key>
+			<string>9DCDBBC9504C8F8ABF8364CF</string>
+		</dict>
+		<key>29CBC5B184FC59BF3794D36E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6C894FDF87E44D49D13ADB6F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2BFF02294BD09E67C5BF5E5B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeaconFirmwareVO.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeaconFirmwareVO.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2CCED701AD77E13093071675</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1382D5F71F3B89BBC86F13D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30231843A5E1DCE1ABD30004</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-AwesomeMenu-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309D3F6CB28FAC096558FE81</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-EstimoteSDK-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>313A7B3FBA7D7FAE7121F18B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>DFC8C596E33D1D694A3942E2</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>C1B1944C88BBCCBCB2FD6A58</string>
+			<key>remoteInfo</key>
+			<string>Pods-EstimoteSDK</string>
+		</dict>
+		<key>35408976FAFF3F20D70DBCDA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E2ADF7D76F788E01FBD3D192</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3636526695CCC639065983EA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4F95C456E7AE30D2DCC5404E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>370C7F06B407C26D5BE91EE3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTRule.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTRule.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>37A0160D9C35A771003DCEF9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-addbutton.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-addbutton.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38A2ED1290EFE455787C27A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537958F09FB71ED75F9B3D74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3B0F4DF91A86A218A14A292F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>icon-plus-highlighted@2x.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/icon-plus-highlighted@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3B2937610D1B4A9118DE1473</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-menuitem@2x.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-menuitem@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3B8CE86A162AC3AB3B69CD52</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0126978A6884933486C391EA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E89F6D93E3B779C6E0DF551</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FE2A4C989AB57D12335F51A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>40081520B3DD4AD242509067</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>30231843A5E1DCE1ABD30004</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-AwesomeMenu/Pods-AwesomeMenu-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>406F4E9B485A491C0F220249</key>
+		<dict>
+			<key>fileRef</key>
+			<string>230824310076124464EA2383</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>40D1B367CC5B2A04C2B59B68</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-EstimoteSDK.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4227DEB746CE5CF908FCA6C4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeacon.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeacon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>44B91A1B1C9D80A6D844A0A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>014DD97BAF7654F24C74CB85</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>494EAC79B87A7BE62A452E1E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTConfig.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTConfig.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4A2D8EB6557041E873F7FF8A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5CF7913CD27117246CBA7546</string>
+				<string>BD639947640D173C06C921CB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4E3C91E4824B44BC315AB1A4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AE6EB57B402161ADB24E2335</string>
+				<string>C1731976736BDBB4B205797F</string>
+				<string>406F4E9B485A491C0F220249</string>
+				<string>BD55F5AD91955123F638DEE4</string>
+				<string>C55A153F665C5BAC7F371432</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4F95C456E7AE30D2DCC5404E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTTrigger.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTTrigger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5192B9D2606259F99B270541</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>16C0679D48791E16D9913709</string>
+				<string>A2301B8E3E58AECD4C22701C</string>
+				<string>FC1D9D151939093169E391B1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>537958F09FB71ED75F9B3D74</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTNearable.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTNearable.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>54F4CAC9EDCE3CD9745E3F41</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>5ADB408A0BA15AC95DAAD768</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>5B7E18DACAACA701559092DB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTNearableManager.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTNearableManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C3F87F883C14C5BC46A584B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-menuitem-highlighted@2x.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-menuitem-highlighted@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C7A1332846F8B2CF034ECBB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8B8DD938FB48DB1F1C89EE03</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5CF7913CD27117246CBA7546</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1CB55A1F3196874696BDF370</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5E7D6F8F939BAB612AC3C934</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>60719A5B8F560A3EB85EC932</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-AwesomeMenu.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>644276CC4D6EF31C58CA3F0A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>494EAC79B87A7BE62A452E1E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>652D2DF82CF39DA261BCA481</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTFirmwareInfoVO.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTFirmwareInfoVO.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>65C252B02CA214FD80838E57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D8AE56442DECA98FF4C62C35</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>66511579410E801CECBD98AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTNearableRule.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTNearableRule.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67461F4F0B4081A9B730741C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E171139AF6698853BAB190A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>68142566EF5E6F86C1289835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F5A80BAED57F49E3ED19BBE1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6896018FD80FED6B608E982B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-menuitem.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-menuitem.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68F5A7B5A004DF99930A0A5C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>30231843A5E1DCE1ABD30004</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-AwesomeMenu/Pods-AwesomeMenu-prefix.pch</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>69E8C6E0D11A9F964B361470</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CC9836C59DC0F74D6F758345</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6A9C33FDD08FA3FF70D523E5</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>40081520B3DD4AD242509067</string>
+				<string>68F5A7B5A004DF99930A0A5C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6BC43E0C6CB79488973DCD64</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CC325E1F4C0F5404CB5F6977</string>
+				<string>8EF7F22BA2EAAC3457E7B576</string>
+				<string>0A23824038F38E308CA8C987</string>
+				<string>7CEDD9347937D26052E9FBCF</string>
+				<string>AB1C9C332DCCBFE86940A8D8</string>
+				<string>240C7BF43A052D437813CE2B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AwesomeMenu</string>
+			<key>path</key>
+			<string>AwesomeMenu</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6C74C5B01BAB144AB12AFEC0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90D462008F0B34439EC16CC7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6C894FDF87E44D49D13ADB6F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTTemperatureRule.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTTemperatureRule.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6EEE9D99D483423A40F34EAE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>icon-star@2x.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/icon-star@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>709F0F0F79F178BC206C18E0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72F25C9FACE51ABBCCABC90F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4A2D8EB6557041E873F7FF8A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>3E89F6D93E3B779C6E0DF551</string>
+				<string>E3A8A649041848C11879B1CA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>29512520D4F43CBC77FFA2DE</string>
+				<string>905E832CFC7FE292B6BA4ABD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>54F4CAC9EDCE3CD9745E3F41</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>787226CBC4107C21B69A3451</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>79F7CDA51336AAFA83397B76</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>CB6E793AA63F7AAD0DEE83C2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-EstimoteSDK/Pods-EstimoteSDK-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>7A77D9BBA3A7C1538E15155B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeaconVO.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeaconVO.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7CEDD9347937D26052E9FBCF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AwesomeMenuItem.m</string>
+			<key>path</key>
+			<string>AwesomeMenu/AwesomeMenu/AwesomeMenuItem.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>80156C6FFC91F86569D8BBBD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-addbutton-highlighted@2x.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-addbutton-highlighted@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8047898B4EFFECE1F2B3C289</key>
+		<dict>
+			<key>fileRef</key>
+			<string>370C7F06B407C26D5BE91EE3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>812598AE4F6F3E0E4DCAA5B8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2750E126A2B9662BEADAC686</string>
+				<string>3B8CE86A162AC3AB3B69CD52</string>
+				<string>B52CF1E172FE7AD64C951434</string>
+				<string>25BC9A84FFCD3FAB69C476FF</string>
+				<string>F8E5BF6703802F31E3E53F92</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>84C9DC76B96FE0329169359B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>045588E3AB3D1FB8212A2205</string>
+				<string>BEA4BA9CC69DAFC1F514B610</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>8A8E69BDBEE1528D13EC32B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1AB458318164B9AB21DE9326</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8B8DD938FB48DB1F1C89EE03</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTMotionRule.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTMotionRule.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8EF7F22BA2EAAC3457E7B576</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AwesomeMenu.m</string>
+			<key>path</key>
+			<string>AwesomeMenu/AwesomeMenu/AwesomeMenu.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8F9363FEA6F135DC5B8EAD44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4227DEB746CE5CF908FCA6C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>905E832CFC7FE292B6BA4ABD</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-EstimoteSDK</string>
+			<key>target</key>
+			<string>C1B1944C88BBCCBCB2FD6A58</string>
+			<key>targetProxy</key>
+			<string>313A7B3FBA7D7FAE7121F18B</string>
+		</dict>
+		<key>90D462008F0B34439EC16CC7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeaconUpdateConfig.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeaconUpdateConfig.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>942540CEC1D6DCDF2ECD7400</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F702F7E814B45E499DBE20C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>990AFA98C02BA478DC5415DB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-addbutton-highlighted.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-addbutton-highlighted.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>996E9301588127C34982F452</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTProximityRule.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTProximityRule.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9A11013C8F2D6F7D099E3743</key>
+		<dict>
+			<key>fileRef</key>
+			<string>787226CBC4107C21B69A3451</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CB4048C33C3C11BD801A61D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-addbutton@2x.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-addbutton@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DCDBBC9504C8F8ABF8364CF</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>DFC8C596E33D1D694A3942E2</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B465E675BF01923217470466</string>
+			<key>remoteInfo</key>
+			<string>Pods-AwesomeMenu</string>
+		</dict>
+		<key>A2301B8E3E58AECD4C22701C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7CEDD9347937D26052E9FBCF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>A386AF4875286B5D25D1BF6A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-EstimoteSDK-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A50BECBF6BC7BA3906FD0A49</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>CB6E793AA63F7AAD0DEE83C2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-EstimoteSDK/Pods-EstimoteSDK-prefix.pch</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AB1C9C332DCCBFE86940A8D8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>37A0160D9C35A771003DCEF9</string>
+				<string>990AFA98C02BA478DC5415DB</string>
+				<string>80156C6FFC91F86569D8BBBD</string>
+				<string>9CB4048C33C3C11BD801A61D</string>
+				<string>6896018FD80FED6B608E982B</string>
+				<string>B161FF28482F19E42A66CFA4</string>
+				<string>5C3F87F883C14C5BC46A584B</string>
+				<string>3B2937610D1B4A9118DE1473</string>
+				<string>CEC72A642890A313A603E91C</string>
+				<string>B459FFBB0979F368D5542B56</string>
+				<string>3B0F4DF91A86A218A14A292F</string>
+				<string>E836754814A54B64A6FC4FBE</string>
+				<string>FAE84F08C609418BA75CCD32</string>
+				<string>6EEE9D99D483423A40F34EAE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AE6EB57B402161ADB24E2335</key>
+		<dict>
+			<key>fileRef</key>
+			<string>26B74D4D069659155552ACC3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B1382D5F71F3B89BBC86F13D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBulkUpdater.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBulkUpdater.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B161FF28482F19E42A66CFA4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>bg-menuitem-highlighted.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/bg-menuitem-highlighted.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B2C8493C8D394665CB7AEFEF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B44A1A4D7EB5D1E9C0216B44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DF5ED8DB2A5DF19D9636671D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B459FFBB0979F368D5542B56</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>icon-plus-highlighted.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/icon-plus-highlighted.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B45F244D0F9380545A098313</key>
+		<dict>
+			<key>fileRef</key>
+			<string>309D3F6CB28FAC096558FE81</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B465E675BF01923217470466</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>6A9C33FDD08FA3FF70D523E5</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5192B9D2606259F99B270541</string>
+				<string>35408976FAFF3F20D70DBCDA</string>
+				<string>B7482BBA1FBF66978A2192BF</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-AwesomeMenu</string>
+			<key>productName</key>
+			<string>Pods-AwesomeMenu</string>
+			<key>productReference</key>
+			<string>0194B918CFFD60A10FD74661</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>B52CF1E172FE7AD64C951434</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6BC43E0C6CB79488973DCD64</string>
+				<string>B5BAD8FB62677215B607C575</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B5BAD8FB62677215B607C575</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4227DEB746CE5CF908FCA6C4</string>
+				<string>1AB458318164B9AB21DE9326</string>
+				<string>2BFF02294BD09E67C5BF5E5B</string>
+				<string>D8AE56442DECA98FF4C62C35</string>
+				<string>014DD97BAF7654F24C74CB85</string>
+				<string>90D462008F0B34439EC16CC7</string>
+				<string>CC9836C59DC0F74D6F758345</string>
+				<string>7A77D9BBA3A7C1538E15155B</string>
+				<string>B1382D5F71F3B89BBC86F13D</string>
+				<string>494EAC79B87A7BE62A452E1E</string>
+				<string>C3DD08ED001F0BFEB08E6755</string>
+				<string>0E171139AF6698853BAB190A</string>
+				<string>652D2DF82CF39DA261BCA481</string>
+				<string>8B8DD938FB48DB1F1C89EE03</string>
+				<string>537958F09FB71ED75F9B3D74</string>
+				<string>F702F7E814B45E499DBE20C5</string>
+				<string>5B7E18DACAACA701559092DB</string>
+				<string>66511579410E801CECBD98AB</string>
+				<string>25B562760B8652AB20667EBB</string>
+				<string>996E9301588127C34982F452</string>
+				<string>370C7F06B407C26D5BE91EE3</string>
+				<string>6C894FDF87E44D49D13ADB6F</string>
+				<string>4F95C456E7AE30D2DCC5404E</string>
+				<string>F5A80BAED57F49E3ED19BBE1</string>
+				<string>B44A1A4D7EB5D1E9C0216B44</string>
+				<string>E5A1F8F8275528E13A5DE531</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>EstimoteSDK</string>
+			<key>path</key>
+			<string>EstimoteSDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B7482BBA1FBF66978A2192BF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F9287006AEFEEFC712555C85</string>
+				<string>E8712C66CA6058BDEAEFECF1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BD55F5AD91955123F638DEE4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7113B3AB5F45CA6DCA81A7C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BD639947640D173C06C921CB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B2C8493C8D394665CB7AEFEF</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>BEA4BA9CC69DAFC1F514B610</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>RELEASE=1</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C1731976736BDBB4B205797F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>787226CBC4107C21B69A3451</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C1B1944C88BBCCBCB2FD6A58</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DB422F5B7E1C3B6D516B90ED</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E06468476ADFEFCE56419DCD</string>
+				<string>4E3C91E4824B44BC315AB1A4</string>
+				<string>1B3186B5513A2452A66D433D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-EstimoteSDK</string>
+			<key>productName</key>
+			<string>Pods-EstimoteSDK</string>
+			<key>productReference</key>
+			<string>40D1B367CC5B2A04C2B59B68</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>C3DD08ED001F0BFEB08E6755</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTDateRule.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTDateRule.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C55A153F665C5BAC7F371432</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5ADB408A0BA15AC95DAAD768</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7113B3AB5F45CA6DCA81A7C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SystemConfiguration.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>CB6E793AA63F7AAD0DEE83C2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-EstimoteSDK-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CC325E1F4C0F5404CB5F6977</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AwesomeMenu.h</string>
+			<key>path</key>
+			<string>AwesomeMenu/AwesomeMenu/AwesomeMenu.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CC9836C59DC0F74D6F758345</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeaconUpdateInfo.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeaconUpdateInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CEC72A642890A313A603E91C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>icon-plus.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/icon-plus.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D8AE56442DECA98FF4C62C35</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTBeaconManager.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTBeaconManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DB422F5B7E1C3B6D516B90ED</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>79F7CDA51336AAFA83397B76</string>
+				<string>A50BECBF6BC7BA3906FD0A49</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DE9FFE47AF2D4270F7D83821</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5B7E18DACAACA701559092DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DF5ED8DB2A5DF19D9636671D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>archive.ar</string>
+			<key>name</key>
+			<string>libEstimoteSDK.a</string>
+			<key>path</key>
+			<string>EstimoteSDK/libEstimoteSDK.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DFC8C596E33D1D694A3942E2</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>84C9DC76B96FE0329169359B</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>812598AE4F6F3E0E4DCAA5B8</string>
+			<key>productRefGroup</key>
+			<string>25BC9A84FFCD3FAB69C476FF</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>72F25C9FACE51ABBCCABC90F</string>
+				<string>B465E675BF01923217470466</string>
+				<string>C1B1944C88BBCCBCB2FD6A58</string>
+			</array>
+		</dict>
+		<key>E06468476ADFEFCE56419DCD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B45F244D0F9380545A098313</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E2ADF7D76F788E01FBD3D192</key>
+		<dict>
+			<key>fileRef</key>
+			<string>787226CBC4107C21B69A3451</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E3A8A649041848C11879B1CA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9A11013C8F2D6F7D099E3743</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E5A1F8F8275528E13A5DE531</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EBFB1B4D31EBD54FE29E4F95</string>
+				<string>CB6E793AA63F7AAD0DEE83C2</string>
+				<string>309D3F6CB28FAC096558FE81</string>
+				<string>A386AF4875286B5D25D1BF6A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-EstimoteSDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6DDF2086BB7A77B1AAD316F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-environment.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E836754814A54B64A6FC4FBE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>icon-plus@2x.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/icon-plus@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8712C66CA6058BDEAEFECF1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0A23824038F38E308CA8C987</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E9E0EA8BB2D8A501B12F3C00</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-AwesomeMenu-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EBFB1B4D31EBD54FE29E4F95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-EstimoteSDK.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EDA45A6A1890F3E8CA3537E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2BFF02294BD09E67C5BF5E5B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EDBD73C67574A526E75A2149</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C3DD08ED001F0BFEB08E6755</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F2EDAA41611B95839B8E48FB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-AwesomeMenu-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5A80BAED57F49E3ED19BBE1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTTriggerManager.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTTriggerManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F702F7E814B45E499DBE20C5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ESTNearableDefinitions.h</string>
+			<key>path</key>
+			<string>EstimoteSDK/Headers/ESTNearableDefinitions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F8315F539881CDE7620F4C86</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7A77D9BBA3A7C1538E15155B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F8E5BF6703802F31E3E53F92</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>16CDBD921F50F2E65D1582AC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F9287006AEFEEFC712555C85</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CC325E1F4C0F5404CB5F6977</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FAE84F08C609418BA75CCD32</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>icon-star.png</string>
+			<key>path</key>
+			<string>AwesomeMenu/Images/icon-star.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FBDA3BBEB98302F96A45A792</key>
+		<dict>
+			<key>fileRef</key>
+			<string>996E9301588127C34982F452</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FC1D9D151939093169E391B1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E9E0EA8BB2D8A501B12F3C00</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>DFC8C596E33D1D694A3942E2</string>
+</dict>
+</plist>
