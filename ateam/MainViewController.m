@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "Speecher.h"
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
@@ -17,7 +18,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [Sound nuk];
+    [Sound schwit];
+    [Sound ding];
+    [Sound ping];
+    //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
     [self setupBeaconManager];
 }
 
