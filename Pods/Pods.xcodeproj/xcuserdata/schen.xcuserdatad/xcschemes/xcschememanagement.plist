@@ -4,25 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AwesomeMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-EstimoteSDK.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CF6B343A87AA9081353D8F79</key>
+		<key>2567509F83569C254EA095D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB249456A5E70BC909286B1E</key>
+		<key>7A079CD937BCE838F5134486</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA187AB61FD8DD31383488BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

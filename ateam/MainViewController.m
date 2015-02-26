@@ -10,7 +10,9 @@
 #import "Speecher.h"
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
-@property (strong, nonatomic) ESTBeaconManager *beaconManager;
+@property (nonatomic, strong) ESTBeaconManager *beaconManager;
+@property (nonatomic, strong) ESTBeaconRegion *region;
+@property (nonatomic, strong) NSArray *beaconsArray;
 @end
 
 @implementation MainViewController
@@ -22,7 +24,7 @@
     [Sound schwit];
     [Sound ding];
     [Sound ping];
-    //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
+
     [self setupBeaconManager];
 }
 
@@ -30,11 +32,35 @@
 {
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
-    self.beaconManager.avoidUnknownStateBeacons = YES;
+    self.beaconManager.returnAllRangedBeaconsAtOnce = YES;
     
-    ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:purpleUUID] major:purpleMajor minor:purpleMinor identifier:purpleIdentifier];
-    [self.beaconManager startMonitoringForRegion:region];
-    [self.beaconManager requestStateForRegion:region];
+    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
+                                                      identifier:@"EstimoteSampleRegion"];
+    [self startRangingBeacons];
+}
+
+-(void)startRangingBeacons
+{
+    if ([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        [self.beaconManager requestAlwaysAuthorization];
+    } else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways) {
+        [self.beaconManager startRangingBeaconsInRegion:self.region];
+    } else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Access Denied"
+                                                        message:@"You have denied access to location services. Change this in app settings."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        
+        [alert show];
+    } else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusRestricted) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Not Available"
+                                                        message:@"You have no access to location services."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 
