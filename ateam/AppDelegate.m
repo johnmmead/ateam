@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <ESTBeaconManager.h>
+#import <ESTConfig.h>
+
 
 @interface AppDelegate ()
 
@@ -16,7 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [ESTConfig setupAppID:@"ateam" andAppToken:@"1f76e821514a14261d66fc7121d35336"];
     return YES;
 }
 
