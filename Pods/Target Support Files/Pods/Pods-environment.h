@@ -6,6 +6,12 @@
 // project.
 
 
+// AwesomeMenu
+#define COCOAPODS_POD_AVAILABLE_AwesomeMenu
+#define COCOAPODS_VERSION_MAJOR_AwesomeMenu 1
+#define COCOAPODS_VERSION_MINOR_AwesomeMenu 0
+#define COCOAPODS_VERSION_PATCH_AwesomeMenu 0
+
 // EstimoteSDK
 #define COCOAPODS_POD_AVAILABLE_EstimoteSDK
 #define COCOAPODS_VERSION_MAJOR_EstimoteSDK 2
