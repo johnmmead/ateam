@@ -1,10 +1,13 @@
 PODS:
+  - AwesomeMenu (1.0.0)
   - EstimoteSDK (2.4.0)
 
 DEPENDENCIES:
+  - AwesomeMenu (~> 1.0.0)
   - EstimoteSDK
 
 SPEC CHECKSUMS:
+  AwesomeMenu: e151e84da2434b7deb8acd118816a1f5d8794608
   EstimoteSDK: 6abcf32ed821e6669cf75d62457dded2c0951e7f
 
 COCOAPODS: 0.35.0
