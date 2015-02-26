@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F341A9FA98900196780 /* UIColor+ateam.m */; };
+		07859F381A9FABD200196780 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F371A9FABD200196780 /* GradientView.m */; };
 		96D2EA2476D7B06E7B27F91F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7250CFF1DB8BEE1C67DC0A /* libPods.a */; };
 		A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A88D5C8E1A9F9E2800E5A1B9 /* main.m */; };
 		A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A88D5C911A9F9E2800E5A1B9 /* AppDelegate.m */; };
@@ -29,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		0592A8496413CA0943AB2F8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		07859F331A9FA98900196780 /* UIColor+ateam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ateam.h"; sourceTree = "<group>"; };
+		07859F341A9FA98900196780 /* UIColor+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ateam.m"; sourceTree = "<group>"; };
+		07859F361A9FABD200196780 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		07859F371A9FABD200196780 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		7B7250CFF1DB8BEE1C67DC0A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88D5C891A9F9E2800E5A1B9 /* ateam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ateam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88D5C8D1A9F9E2800E5A1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +71,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07859F3F1A9FAE2500196780 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				07859F331A9FA98900196780 /* UIColor+ateam.h */,
+				07859F341A9FA98900196780 /* UIColor+ateam.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		07859F401A9FAE3B00196780 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A88D5C931A9F9E2800E5A1B9 /* ViewController.h */,
+				A88D5C941A9F9E2800E5A1B9 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		07859F411A9FAE4400196780 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07859F361A9FABD200196780 /* GradientView.h */,
+				07859F371A9FABD200196780 /* GradientView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		187119C064D46D23BF4B3A9F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +132,12 @@
 			children = (
 				A88D5C901A9F9E2800E5A1B9 /* AppDelegate.h */,
 				A88D5C911A9F9E2800E5A1B9 /* AppDelegate.m */,
-				A88D5C931A9F9E2800E5A1B9 /* ViewController.h */,
-				A88D5C941A9F9E2800E5A1B9 /* ViewController.m */,
+				07859F3F1A9FAE2500196780 /* Category */,
+				07859F411A9FAE4400196780 /* View */,
+				07859F401A9FAE3B00196780 /* Controller */,
 				A88D5C961A9F9E2800E5A1B9 /* Main.storyboard */,
-				A88D5C991A9F9E2800E5A1B9 /* Images.xcassets */,
 				A88D5C9B1A9F9E2800E5A1B9 /* LaunchScreen.xib */,
+				A88D5C991A9F9E2800E5A1B9 /* Images.xcassets */,
 				A88D5C8C1A9F9E2800E5A1B9 /* Supporting Files */,
 			);
 			path = ateam;
@@ -279,7 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A88D5C951A9F9E2800E5A1B9 /* ViewController.m in Sources */,
+				07859F381A9FABD200196780 /* GradientView.m in Sources */,
 				A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */,
+				07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */,
 				A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
