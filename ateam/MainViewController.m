@@ -129,6 +129,7 @@
 {
     if ([segue.identifier isEqualToString:@"TeamViewControllerSegueIdentifier"]) {
         self.teamViewController = segue.destinationViewController;
+        self.teamViewController.view.alpha = 0.0f;
     } else {
         [super prepareForSegue:segue sender:sender];
     }
