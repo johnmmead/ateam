@@ -9,6 +9,7 @@
 #import "TeamViewController.h"
 
 #import "GradientView.h"
+#import "TeamViewCell.h"
 #import "UIColor+ateam.h"
 #import "UIFont+ateam.h"
 #import "AwesomeMenu.h"
@@ -24,8 +25,6 @@ BOOL showAll;
 @interface TeamViewController () <AwesomeMenuDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet GradientView *backgroundView;
-@property (nonatomic, weak) IBOutlet UILabel *profileTitle;
-@property (nonatomic, weak) IBOutlet UIButton *backButton;
 @property (nonatomic, weak) IBOutlet UIImageView *profile1View;
 @property (nonatomic, weak) IBOutlet UIImageView *profile2View;
 @property (nonatomic, weak) IBOutlet UIImageView *profile3View;
@@ -41,19 +40,15 @@ BOOL showAll;
 {
     [super viewDidLoad];
     
-    _tableData = [NSArray arrayWithObjects:@"Data will go here...", nil];
+    _tableData = [NSArray arrayWithObjects:@"Search Team", @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis mauris placerat leo dignissim viverra. Quisque vehicula, metus ut luctus accumsan, justo dolor suscipit eros, vel rutrum arcu nunc nec arcu. Etiam bibendum dui nibh, ac varius turpis finibus vitae. Nam et auctor felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer non risus lobortis, iaculis nisi nec, pharetra elit.", nil];
     
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorColor = [UIColor whiteColor];
     
-    _profileTitle.font = [UIFont exoBlackFontOfSize:30];
-    _profileTitle.text = @"Members of this team!";
-    
     _backgroundView.colors = @[[UIColor ateamRed], [UIColor ateamDarkRed], [UIColor ateamDarkestRed]];
     
-    [self styleBackButton];
     [self styleProfileImageViews:@[_profile1View, _profile2View, _profile3View, _profile4View, _profile5View]];
     
     [self setNeedsStatusBarAppearanceUpdate];
@@ -73,34 +68,18 @@ BOOL showAll;
     _profile2View.layer.cornerRadius = 80;
 }
 
-- (void)styleBackButton
-{
-    _backButton.layer.cornerRadius = 30;
-    _backButton.backgroundColor = [UIColor ateamDarkRed];
-    [_backButton setTitle:@"BACK" forState:UIControlStateNormal];
-    [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    _backButton.titleLabel.font = [UIFont exoMediumFontOfSize:14];
-}
-
 #pragma mark - UITableView
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TeamName];
-        cell.textLabel.text = _tableData[indexPath.row];
-        cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.font = [UIFont exoMediumFontOfSize:16];
-        cell.backgroundColor = [UIColor clearColor];
-        return cell;
-    } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TeamDescription];
-        cell.textLabel.text = _tableData[indexPath.row];
-        cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.font = [UIFont exoMediumFontOfSize:16];
-        cell.backgroundColor = [UIColor clearColor];
-        return cell;
-    }
+    TeamViewCell *cell = (TeamViewCell *)[tableView dequeueReusableCellWithIdentifier:TeamName];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.label.text = _tableData[indexPath.row];
+    cell.label.textColor = indexPath.row == 0 ? [UIColor ateamRed] : [UIColor whiteColor];
+    cell.label.font = indexPath.row == 0 ? [UIFont exoLightFontOfSize:40] : [UIFont exoMediumFontOfSize:16];
+    cell.label.shadowColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.25];
+    cell.label.shadowOffset = CGSizeMake(0, 10);
+    return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -110,7 +89,7 @@ BOOL showAll;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _tableData.count;
+    return 2;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
