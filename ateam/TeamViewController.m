@@ -175,7 +175,7 @@ NSString *const TeamDescription = @"TeamDescription";
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[darkness]|" options:0 metrics:nil views:views]];
     
     [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
-        darkness.alpha = 1;
+        darkness.alpha = 0.85;
     } completion:nil];
     
     SCLAlertView *alert = [[SCLAlertView alloc] init];

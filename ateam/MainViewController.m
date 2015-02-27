@@ -186,20 +186,30 @@
             __block TeamViewController *teamViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TeamViewControllerStoryboardIdentifier"];
             teamViewController.selectedTeam = team;
             
+            __block BOOL isFirstLoad = self.backgroundImageView.alpha > 0;
             teamViewController.view.frame = self.teamViewController.view.frame;
+            teamViewController.view.alpha = 0.6;
             [teamViewController willMoveToParentViewController:self];
             [self addChildViewController:teamViewController];
             [teamViewController didMoveToParentViewController:self];
             [self.teamViewController willMoveToParentViewController:nil];
             void (^f)(void) = ^() {
-                [self transitionFromViewController:self.teamViewController toViewController:teamViewController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:^(BOOL finished) {
+                [UIView animateWithDuration:1.2f animations:^{
+                    teamViewController.view.alpha = 1.0f;
+                    self.teamViewController.view.alpha = 0.6;
+                } completion:^(BOOL finished) {
+                    teamViewController.view.alpha = 1.0f;
+                }];
+                
+                [self transitionFromViewController:self.teamViewController toViewController:teamViewController duration:0.8f options:(isFirstLoad ? UIViewAnimationOptionCurveEaseInOut: UIViewAnimationOptionTransitionFlipFromLeft) animations:nil completion:^(BOOL finished) {
                     [teamViewController didMoveToParentViewController:self];
                     [self.teamViewController didMoveToParentViewController:nil];
                     self.teamViewController = teamViewController;
                 }];
             };
-            if (self.backgroundImageView.alpha > 0) {
-                [UIView animateWithDuration:0.5 animations:^{
+            
+            if (isFirstLoad) {
+                [UIView animateWithDuration:0.6f animations:^{
                     self.backgroundImageView.alpha = 0.0;
                 } completion:^(BOOL finished) {
                     self.backgroundImageView.alpha = 0.0;
