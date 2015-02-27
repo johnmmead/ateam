@@ -179,7 +179,7 @@ NSString *const TeamDescription = @"TeamDescription";
         MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
         controller.mailComposeDelegate = self;
         [controller setToRecipients:@[view.person.email]];
-        [controller setSubject:@"Greeting from the A-Team!!"];
+        [controller setSubject:@"Greetings from the A-Team!!"];
         [controller setMessageBody:@"" isHTML:NO];
         if (controller) [self presentViewController:controller animated:YES completion:nil];
     }];
