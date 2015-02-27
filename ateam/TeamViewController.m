@@ -22,6 +22,7 @@ NSString *const TeamDescription = @"TeamDescription";
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet GradientView *backgroundView;
+@property (nonatomic, weak) IBOutlet UIView *patternView;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile1View;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile2View;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile3View;
@@ -53,6 +54,8 @@ NSString *const TeamDescription = @"TeamDescription";
     _tableView.separatorColor = [UIColor whiteColor];
     
     _backgroundView.colors = @[[UIColor ateamRed], [UIColor ateamDarkRed], [UIColor ateamDarkestRed]];
+    _patternView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sci-fi_metal_wall"]];
+    _patternView.alpha = 0.2;
     
     NSArray *profiles = @[_profile1View, _profile2View, _profile3View, _profile4View, _profile5View];
     

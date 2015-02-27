@@ -56,11 +56,15 @@
                         <rect key="frame" x="0.0" y="64" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dAv-XA-HA5" customClass="GradientView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAv-XA-HA5" customClass="GradientView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.49019607840000001" green="0.4823529412" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="C3i-sg-YsV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNt-Oz-yRv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="C3i-sg-YsV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Euq-bg-PGo">
@@ -161,6 +165,20 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="bottom" secondItem="C3i-sg-YsV" secondAttribute="bottom" id="6iT-Cc-rd4"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="top" secondItem="dAv-XA-HA5" secondAttribute="top" id="8aa-w1-BXJ"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="top" secondItem="C3i-sg-YsV" secondAttribute="top" id="9kz-nP-Wkd"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="leading" secondItem="C3i-sg-YsV" secondAttribute="leading" id="HAb-1M-OL7"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="leading" secondItem="X1e-8i-HBp" secondAttribute="leading" id="I8f-52-zur"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="trailing" secondItem="C3i-sg-YsV" secondAttribute="trailing" id="J7H-6v-q6f"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="trailing" secondItem="dAv-XA-HA5" secondAttribute="trailing" id="XvS-ea-tdZ"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="bottom" secondItem="dAv-XA-HA5" secondAttribute="bottom" id="cUg-vO-pwB"/>
+                            <constraint firstAttribute="trailing" secondItem="VNt-Oz-yRv" secondAttribute="trailing" id="cto-j9-qvF"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="bottom" secondItem="Umu-RT-NQC" secondAttribute="top" id="n2x-DZ-rjC"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="top" secondItem="X1e-8i-HBp" secondAttribute="top" id="oSC-aJ-5Ko"/>
+                            <constraint firstItem="VNt-Oz-yRv" firstAttribute="leading" secondItem="dAv-XA-HA5" secondAttribute="leading" id="wU8-X8-ADe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Team A" id="2yx-Ut-IoS"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -168,6 +186,7 @@
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
                         <outlet property="backgroundView" destination="dAv-XA-HA5" id="rYD-DC-qLL"/>
+                        <outlet property="patternView" destination="VNt-Oz-yRv" id="M7W-Lo-aQi"/>
                         <outlet property="profile1View" destination="awT-1I-Wsx" id="sFC-fD-Cp8"/>
                         <outlet property="profile2View" destination="Exq-GQ-xUG" id="HBh-No-clm"/>
                         <outlet property="profile3View" destination="5EG-0o-P1D" id="MJN-Km-Bbq"/>
