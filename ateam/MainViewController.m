@@ -9,8 +9,6 @@
 #import "MainViewController.h"
 #import "Speecher.h"
 
-#import "ESTBeaconTableVC.h"
-
 @interface MainViewController () < ESTBeaconManagerDelegate >
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
@@ -42,11 +40,7 @@
     self.beaconManager.delegate = self;
     self.beaconManager.returnAllRangedBeaconsAtOnce = YES;
     
-<<<<<<< HEAD
     self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"Estimote Devices"];
-=======
-    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:nil];
->>>>>>> b4c9b4c2d7e593d97a7ae6f9923c6bec5de05fbc
     [self startRangingBeacons];
 }
 
@@ -92,8 +86,6 @@
 - (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
-<<<<<<< HEAD
-=======
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager didEnterRegion:(ESTBeaconRegion *)region
@@ -104,7 +96,6 @@
 - (void)beaconManager:(ESTBeaconManager *)manager didExitRegion:(ESTBeaconRegion *)region
 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
->>>>>>> b4c9b4c2d7e593d97a7ae6f9923c6bec5de05fbc
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
