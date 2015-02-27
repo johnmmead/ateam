@@ -26,6 +26,7 @@
     [Sound schwit];
     [Sound ding];
     [Sound ping];
+    
     //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
 }
 
@@ -41,11 +42,11 @@
     self.beaconManager.delegate = self;
     self.beaconManager.returnAllRangedBeaconsAtOnce = YES;
     
-    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"ABC"];
+    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"Estimote Devices"];
     [self startRangingBeacons];
 }
 
--(void)startRangingBeacons
+- (void)startRangingBeacons
 {
     if ([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
@@ -80,24 +81,12 @@
 
 - (void)beaconManager:(ESTBeaconManager *)manager rangingBeaconsDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
 {
-    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Ranging error"
-                                                        message:error.localizedDescription
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    
-    [errorView show];
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager monitoringDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
 {
-    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Monitoring error"
-                                                        message:error.localizedDescription
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    
-    [errorView show];
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
