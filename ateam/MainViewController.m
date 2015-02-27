@@ -41,7 +41,7 @@
     self.beaconManager.delegate = self;
     self.beaconManager.returnAllRangedBeaconsAtOnce = YES;
     
-    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:nil];
+    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"ABC"];
     [self startRangingBeacons];
 }
 
@@ -72,46 +72,42 @@
     }
 }
 
-
 #pragma mark ESTBeaconManagerDelegate
 - (void)beaconManager:(ESTBeaconManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    [self startRangingBeacons];
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager didDetermineState:(CLRegionState)state forRegion:(ESTBeaconRegion *)region
+- (void)beaconManager:(ESTBeaconManager *)manager rangingBeaconsDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
 {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Ranging error"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    
+    [errorView show];
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+- (void)beaconManager:(ESTBeaconManager *)manager monitoringDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
 {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-}
-
-- (void)beaconManager:(ESTBeaconManager *)manager didEnterRegion:(ESTBeaconRegion *)region
-{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-}
-
-- (void)beaconManager:(ESTBeaconManager *)manager didExitRegion:(ESTBeaconRegion *)region
-{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Monitoring error"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    
+    [errorView show];
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    self.beaconsArray = beacons;
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager didStartMonitoringForRegion:(ESTBeaconRegion *)region
+- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-}
-
-- (void)beaconManagerDidStartAdvertising:(ESTBeaconManager *)manager error:(NSError *)error
-{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    self.beaconsArray = beacons;
 }
 
 @end
