@@ -9,15 +9,16 @@
 import Foundation
 
 class Team: NSObject {
-    var Name: String
-    var Info: String
-    var Url: String
-    var DeviceUUID: String
-    
-    init(name: String, info: String, url: String, deviceUUID: String){
-        Name=name
-        Info=info
-        Url=url
-        DeviceUUID=deviceUUID
+    var name: String
+    var info: String
+    var url: String
+    var deviceId: String
+    var members = [Person]()
+
+    init(name: String, info: String, url: String, deviceId: String){
+        self.name = name
+        self.info = info
+        self.url = url
+        self.deviceId = deviceId
     }
 }
