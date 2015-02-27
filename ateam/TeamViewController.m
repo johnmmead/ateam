@@ -46,10 +46,8 @@ NSString *const TeamDescription = @"TeamDescription";
 {
     [super viewDidLoad];
     
-    [self loadData]; //jmead - build out Friday
-
-    _tableData = [NSArray arrayWithObjects:@"Search Team", @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis mauris placerat leo dignissim viverra. Quisque vehicula, metus ut luctus accumsan, justo dolor suscipit eros, vel rutrum arcu nunc nec arcu. Etiam bibendum dui nibh, ac varius turpis finibus vitae. Nam et auctor felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer non risus lobortis, iaculis nisi nec, pharetra elit.", nil];
-    
+    // populate the table
+    _tableData = [NSArray arrayWithObjects:self.selectedTeam.name, self.selectedTeam.info, nil];
     _animate = YES;
     
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -64,9 +62,7 @@ NSString *const TeamDescription = @"TeamDescription";
     NSArray *profiles = @[_profile1View, _profile2View, _profile3View, _profile4View, _profile5View];
     
     [self animateProfiles:profiles];
-    
     [self styleProfiles:profiles];
-    
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
@@ -76,7 +72,24 @@ NSString *const TeamDescription = @"TeamDescription";
     _animate = NO;
 }
 
+
+
 - (void)animateProfiles:(NSArray *)profiles
+{
+    _profile1View.goUp = NO;
+    _profile2View.goUp = YES;
+    _profile3View.goUp = NO;
+    _profile4View.goUp = NO;
+    _profile5View.goUp = NO;
+    for (unsigned i = 0; i < profiles.count; i++) {
+        ProfileImageView *view = profiles[i];
+        view.duration = 1.0 + ((arc4random() % 20)/10.0f);
+        [self toggleView:view];
+    }
+}
+
+
+- (void)populateProfiles:(NSArray *)profiles
 {
     _profile1View.goUp = NO;
     _profile2View.goUp = YES;
@@ -142,7 +155,7 @@ NSString *const TeamDescription = @"TeamDescription";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return _tableData.count;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -195,48 +208,9 @@ NSString *const TeamDescription = @"TeamDescription";
     }];
 }
 
-- (NSArray *)loadData{
-    NSMutableArray *teams = [NSMutableArray new];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Team" ofType:@"json"];
-    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error =  nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    NSArray *items = [json valueForKeyPath:@"Team"];
-    for (NSDictionary *item in items) {
-        Team *team = [[Team alloc] init];
-        team.name = [item objectForKey:@"name"];
-        team.info = [item objectForKey:@"info"];
-        team.teamId = [item objectForKey:@"teamId"];
-        team.deviceId = [item objectForKey:@"deviceId"];
-        team.people = [self getPeopleWithTeamId:team.teamId];
-        [teams addObject:team];
-    }
-    return teams;
-}
-
-- (NSArray *)getPeopleWithTeamId:(NSString *)teamId
+- (void)refresh
 {
-    NSMutableArray *people = [NSMutableArray new];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Person" ofType:@"json"];
-    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error =  nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    NSArray *items = [json valueForKeyPath:@"Person"];
-    for (NSDictionary *item in items) {
-        NSString *tid = [item objectForKey:@"teamId"];
-        if([teamId isEqualToString:tid]){
-            Person *person = [[Person alloc] init];
-            person.teamId = tid;
-            person.name = [item objectForKey:@"name"];
-            person.info = [item objectForKey:@"info"];
-            person.phone= [item objectForKey:@"phone"];
-            person.email = [item objectForKey:@"email"];
-            person.image = [item objectForKey:@"image"];
-            person.gender = [item objectForKey:@"gender"];
-            [people addObject:person];
-        }
-    }
-    return people;
+    [_tableView reloadData];
 }
 
 @end

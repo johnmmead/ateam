@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TeamViewController : UIViewController
-
+@property (nonatomic, strong) Team *selectedTeam;
 @end
