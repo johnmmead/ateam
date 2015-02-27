@@ -41,7 +41,7 @@
                "name": "Michael Lawless",
                "phone": "925-285-4021",
                "email": "mlawless@ancestry.com",
-               "info": "Hi, my name is Michael Lawless. I'm the product manager for iOS west.  just waiting for baseball season to finally start.",
+               "info": "Hi, my name is Michael Lawless. I'm the product manager for iOS west. I'm a huge fan of the Oakland Athletics and I'm can't wait for baseball season to finally start!",
                "gender": "male",
                "image": "michael_lawless"
                },
@@ -102,8 +102,8 @@
                {
                "teamId": "3",
                "name": "Bob Dowling",
-               "phone": "213-370-3402",
-               "email": "schen@ancestry.com",
+               "phone": "415-279-0032",
+               "email": "bdowling@ancestry.com",
                "info": "Hi, my name is Bob. You might recognize me from such after school specials as pre colombian art for preschoolers, and fancy cats for fancy men.",
                "gender": "male",
                "image": "bob_dowling"
