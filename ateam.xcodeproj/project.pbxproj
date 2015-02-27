@@ -57,6 +57,7 @@
 		A88D5C9A1A9F9E2800E5A1B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88D5C991A9F9E2800E5A1B9 /* Images.xcassets */; };
 		A88D5C9D1A9F9E2800E5A1B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A88D5C9B1A9F9E2800E5A1B9 /* LaunchScreen.xib */; };
 		A88D5CA91A9F9E2800E5A1B9 /* ateamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A88D5CA81A9F9E2800E5A1B9 /* ateamTests.m */; };
+		A8B568B81AA0EBCA004B168E /* ateam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8B568B71AA0EBCA004B168E /* ateam.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		A88D5CA21A9F9E2800E5A1B9 /* ateamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ateamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88D5CA71A9F9E2800E5A1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A88D5CA81A9F9E2800E5A1B9 /* ateamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ateamTests.m; sourceTree = "<group>"; };
+		A8B568B71AA0EBCA004B168E /* ateam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ateam.mp3; sourceTree = "<group>"; };
 		C0101A28EA9A0E1B31ACCCEF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,6 +288,7 @@
 		A86DB4521A9FCCE600A88647 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A8B568B71AA0EBCA004B168E /* ateam.mp3 */,
 				A86DB44A1A9FCCDC00A88647 /* ding.wav */,
 				A86DB44B1A9FCCDC00A88647 /* nuk.aiff */,
 				A86DB44C1A9FCCDC00A88647 /* ping.aiff */,
@@ -463,6 +466,7 @@
 				07823A691A9FC48600AB8C8B /* Exo-Italic.otf in Resources */,
 				07823A6F1A9FC48600AB8C8B /* Exo-SemiBold.otf in Resources */,
 				A86DB4A61AA05E2200A88647 /* Person.json in Resources */,
+				A8B568B81AA0EBCA004B168E /* ateam.mp3 in Resources */,
 				07823A671A9FC48600AB8C8B /* Exo-ExtraLight.otf in Resources */,
 				07823A6A1A9FC48600AB8C8B /* Exo-Light.otf in Resources */,
 				07823A661A9FC48600AB8C8B /* Exo-ExtraBoldItalic.otf in Resources */,

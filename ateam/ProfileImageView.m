@@ -20,6 +20,12 @@
     [self configureTapGesture];
 }
 
+- (void)setPerson:(Person *)person
+{
+    _person = person;
+    self.image = [UIImage imageNamed:person.image];
+}
+
 - (void)configureTapGesture
 {
     _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];

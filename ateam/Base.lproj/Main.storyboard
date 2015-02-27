@@ -97,33 +97,33 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4l-BS-cXp">
                                             <rect key="frame" x="0.0" y="20" width="414" height="300"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alex_kudinov" translatesAutoresizingMaskIntoConstraints="NO" id="awT-1I-Wsx" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alex_kudinov" translatesAutoresizingMaskIntoConstraints="NO" id="awT-1I-Wsx" customClass="ProfileImageView">
                                                     <rect key="frame" x="70" y="30" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="90" id="JlC-wC-lQl"/>
                                                         <constraint firstAttribute="width" constant="90" id="fkR-jw-6WX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaurav_shetti" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-0o-P1D" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaurav_shetti" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-0o-P1D" customClass="ProfileImageView">
                                                     <rect key="frame" x="274" y="65" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="MYw-9N-NUW"/>
                                                         <constraint firstAttribute="height" constant="90" id="O3D-qe-yGX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liam_molloy" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-5g-2pZ" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liam_molloy" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-5g-2pZ" customClass="ProfileImageView">
                                                     <rect key="frame" x="60" y="170" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Vxk-Xe-gov"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gann_bierner" translatesAutoresizingMaskIntoConstraints="NO" id="Exq-GQ-xUG" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gann_bierner" translatesAutoresizingMaskIntoConstraints="NO" id="Exq-GQ-xUG" customClass="ProfileImageView">
                                                     <rect key="frame" x="127" y="70" width="160" height="160"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="QLe-Ba-tpi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="max_bolotin" translatesAutoresizingMaskIntoConstraints="NO" id="2Sy-EB-Q5s" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="max_bolotin" translatesAutoresizingMaskIntoConstraints="NO" id="2Sy-EB-Q5s" customClass="ProfileImageView">
                                                     <rect key="frame" x="244" y="195" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Xfo-Eu-uVT"/>

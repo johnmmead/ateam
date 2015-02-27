@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "TeamViewController.h"
 #import "Speecher.h"
+#import <AVFoundation/AVFoundation.h>
 #import "UIColor+ateam.h"
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
@@ -16,8 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) TeamViewController *teamViewController;
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
-@property (strong, nonatomic) ESTBeaconRegion *region;
-@property (strong, nonatomic) NSArray *beaconsArray;
+@property (nonatomic, strong) ESTBeaconRegion *region;
+@property (nonatomic, strong) NSArray *beaconsArray;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (strong, nonatomic) NSArray *teamModels;
 @property (strong, nonatomic) Team *previousTeam;
 @end
@@ -28,9 +30,8 @@
 {
     [super viewDidLoad];
     [Sound nuk];
-    [Sound schwit];
-    [Sound ding];
-    [Sound ping];
+    [self playBackgroundMusic];
+
     [self loadTeams];
     
     self.view.backgroundColor = [UIColor ateamDarkestRed];
@@ -219,6 +220,18 @@
 - (void)beaconManagerDidStartAdvertising:(ESTBeaconManager *)manager error:(NSError *)error
 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)playBackgroundMusic
+{
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *filePath = [mainBundle pathForResource:@"ateam" ofType:@"mp3"];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+    NSError *error = nil;
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:fileData error:&error];
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer setVolume:0.2];
+    [self.audioPlayer play];
 }
 
 @end
