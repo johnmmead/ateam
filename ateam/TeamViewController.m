@@ -35,12 +35,7 @@ NSString *const TeamDescription = @"TeamDescription";
 
 @end
 
-@implementation TeamViewController {
-    BOOL showAddPhoto;
-    BOOL showAddMemorial;
-    BOOL showViewMemorial;
-    BOOL showAll;
-}
+@implementation TeamViewController 
 
 - (void)viewDidLoad
 {
