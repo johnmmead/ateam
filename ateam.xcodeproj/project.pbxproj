@@ -29,6 +29,13 @@
 		07823A731A9FC48600AB8C8B /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07823A601A9FC48600AB8C8B /* SIL Open Font License.txt */; };
 		07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */; };
 		07823A791A9FDF5E00AB8C8B /* TeamViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A781A9FDF5E00AB8C8B /* TeamViewCell.m */; };
+		07823A7C1A9FEECA00AB8C8B /* ProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A7B1A9FEECA00AB8C8B /* ProfileImageView.m */; };
+		07823A8D1A9FFB9C00AB8C8B /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A841A9FFB9C00AB8C8B /* SCLAlertView.m */; };
+		07823A8E1A9FFB9C00AB8C8B /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A861A9FFB9C00AB8C8B /* SCLAlertViewResponder.m */; };
+		07823A8F1A9FFB9C00AB8C8B /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A881A9FFB9C00AB8C8B /* SCLAlertViewStyleKit.m */; };
+		07823A901A9FFB9C00AB8C8B /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A8A1A9FFB9C00AB8C8B /* SCLButton.m */; };
+		07823A911A9FFB9C00AB8C8B /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A8C1A9FFB9C00AB8C8B /* UIImage+ImageEffects.m */; };
+		07823A941AA00B6400AB8C8B /* PushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 07823A931AA00B6400AB8C8B /* PushNoAnimationSegue.m */; };
 		07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F341A9FA98900196780 /* UIColor+ateam.m */; };
 		07859F381A9FABD200196780 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F371A9FABD200196780 /* GradientView.m */; };
 		96D2EA2476D7B06E7B27F91F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7250CFF1DB8BEE1C67DC0A /* libPods.a */; };
@@ -85,6 +92,20 @@
 		07823A751A9FC5C000AB8C8B /* UIFont+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ateam.m"; sourceTree = "<group>"; };
 		07823A771A9FDF5E00AB8C8B /* TeamViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewCell.h; sourceTree = "<group>"; };
 		07823A781A9FDF5E00AB8C8B /* TeamViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewCell.m; sourceTree = "<group>"; };
+		07823A7A1A9FEECA00AB8C8B /* ProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileImageView.h; sourceTree = "<group>"; };
+		07823A7B1A9FEECA00AB8C8B /* ProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileImageView.m; sourceTree = "<group>"; };
+		07823A831A9FFB9C00AB8C8B /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
+		07823A841A9FFB9C00AB8C8B /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
+		07823A851A9FFB9C00AB8C8B /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		07823A861A9FFB9C00AB8C8B /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewResponder.m; sourceTree = "<group>"; };
+		07823A871A9FFB9C00AB8C8B /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
+		07823A881A9FFB9C00AB8C8B /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
+		07823A891A9FFB9C00AB8C8B /* SCLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButton.h; sourceTree = "<group>"; };
+		07823A8A1A9FFB9C00AB8C8B /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
+		07823A8B1A9FFB9C00AB8C8B /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		07823A8C1A9FFB9C00AB8C8B /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		07823A921AA00B6400AB8C8B /* PushNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNoAnimationSegue.h; sourceTree = "<group>"; };
+		07823A931AA00B6400AB8C8B /* PushNoAnimationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNoAnimationSegue.m; sourceTree = "<group>"; };
 		07859F331A9FA98900196780 /* UIColor+ateam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ateam.h"; sourceTree = "<group>"; };
 		07859F341A9FA98900196780 /* UIColor+ateam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ateam.m"; sourceTree = "<group>"; };
 		07859F361A9FABD200196780 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
@@ -171,6 +192,23 @@
 			path = exo;
 			sourceTree = "<group>";
 		};
+		07823A821A9FFB9C00AB8C8B /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				07823A831A9FFB9C00AB8C8B /* SCLAlertView.h */,
+				07823A841A9FFB9C00AB8C8B /* SCLAlertView.m */,
+				07823A851A9FFB9C00AB8C8B /* SCLAlertViewResponder.h */,
+				07823A861A9FFB9C00AB8C8B /* SCLAlertViewResponder.m */,
+				07823A871A9FFB9C00AB8C8B /* SCLAlertViewStyleKit.h */,
+				07823A881A9FFB9C00AB8C8B /* SCLAlertViewStyleKit.m */,
+				07823A891A9FFB9C00AB8C8B /* SCLButton.h */,
+				07823A8A1A9FFB9C00AB8C8B /* SCLButton.m */,
+				07823A8B1A9FFB9C00AB8C8B /* UIImage+ImageEffects.h */,
+				07823A8C1A9FFB9C00AB8C8B /* UIImage+ImageEffects.m */,
+			);
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
 		07859F3F1A9FAE2500196780 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,8 +227,6 @@
 				9C12B2A31A9FAA550017DE80 /* MainViewController.m */,
 				07823A4A1A9FB4DF00AB8C8B /* TeamViewController.h */,
 				07823A4B1A9FB4DF00AB8C8B /* TeamViewController.m */,
-				07823A771A9FDF5E00AB8C8B /* TeamViewCell.h */,
-				07823A781A9FDF5E00AB8C8B /* TeamViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -200,6 +236,12 @@
 			children = (
 				07859F361A9FABD200196780 /* GradientView.h */,
 				07859F371A9FABD200196780 /* GradientView.m */,
+				07823A771A9FDF5E00AB8C8B /* TeamViewCell.h */,
+				07823A781A9FDF5E00AB8C8B /* TeamViewCell.m */,
+				07823A7A1A9FEECA00AB8C8B /* ProfileImageView.h */,
+				07823A7B1A9FEECA00AB8C8B /* ProfileImageView.m */,
+				07823A921AA00B6400AB8C8B /* PushNoAnimationSegue.h */,
+				07823A931AA00B6400AB8C8B /* PushNoAnimationSegue.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +307,7 @@
 				07823A491A9FB46B00AB8C8B /* Model */,
 				07859F411A9FAE4400196780 /* View */,
 				07859F401A9FAE3B00196780 /* Controller */,
+				07823A821A9FFB9C00AB8C8B /* SCLAlertView */,
 				07823A4D1A9FC48600AB8C8B /* exo */,
 				A88D5C961A9F9E2800E5A1B9 /* Main.storyboard */,
 				A88D5C9B1A9F9E2800E5A1B9 /* LaunchScreen.xib */,
@@ -469,15 +512,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07823A911A9FFB9C00AB8C8B /* UIImage+ImageEffects.m in Sources */,
 				07859F381A9FABD200196780 /* GradientView.m in Sources */,
+				07823A8E1A9FFB9C00AB8C8B /* SCLAlertViewResponder.m in Sources */,
 				07823A4C1A9FB4DF00AB8C8B /* TeamViewController.m in Sources */,
+				07823A8D1A9FFB9C00AB8C8B /* SCLAlertView.m in Sources */,
 				A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */,
 				A86DB4431A9FC58100A88647 /* Speecher.m in Sources */,
 				A86DB4551A9FCE3700A88647 /* Sound.m in Sources */,
+				07823A7C1A9FEECA00AB8C8B /* ProfileImageView.m in Sources */,
 				9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */,
+				07823A941AA00B6400AB8C8B /* PushNoAnimationSegue.m in Sources */,
+				07823A8F1A9FFB9C00AB8C8B /* SCLAlertViewStyleKit.m in Sources */,
 				07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */,
 				07823A791A9FDF5E00AB8C8B /* TeamViewCell.m in Sources */,
 				07859F351A9FA98900196780 /* UIColor+ateam.m in Sources */,
+				07823A901A9FFB9C00AB8C8B /* SCLButton.m in Sources */,
 				A88D5C8F1A9F9E2800E5A1B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,11 +651,14 @@
 			baseConfigurationReference = 0592A8496413CA0943AB2F8E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ateam/Ateam-PrefixHeader.pch";
 				INFOPLIST_FILE = ateam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ateam/ateam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -614,11 +667,13 @@
 			baseConfigurationReference = C0101A28EA9A0E1B31ACCCEF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ateam/Ateam-PrefixHeader.pch";
 				INFOPLIST_FILE = ateam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ateam/ateam-Bridging-Header.h";
 			};
 			name = Release;
 		};

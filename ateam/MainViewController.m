@@ -24,6 +24,7 @@
     [Sound ping];
     //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
     [self setupBeaconManager];
+    [self performSegueWithIdentifier:@"SegueToTeam" sender:self];
 }
 
 - (void)setupBeaconManager
