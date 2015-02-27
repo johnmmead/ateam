@@ -155,7 +155,7 @@ NSString *const TeamDescription = @"TeamDescription";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return _tableData.count;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
