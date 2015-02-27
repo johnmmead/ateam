@@ -155,8 +155,10 @@ NSString *const TeamDescription = @"TeamDescription";
 
 - (void)profileImageViewWasTapped:(ProfileImageView *)view
 {
-    [Speecher speak:view.person.info forGender:@"male"];
+    [Sound nuk];
+    [Speecher speak:view.person.info forGender:view.person.gender];
 
+    self.busy = YES;
     UIView *darkness = [[UIView alloc] init];
     darkness.backgroundColor = [UIColor blackColor];
     darkness.alpha = 0;
