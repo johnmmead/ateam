@@ -220,50 +220,6 @@ NSString *const TeamDescription = @"TeamDescription";
     }];
 }
 
-- (void)loadData{
-    NSMutableArray *teams = [NSMutableArray new];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Team" ofType:@"json"];
-    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error =  nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    NSArray *items = [json valueForKeyPath:@"Team"];
-    for (NSDictionary *item in items) {
-        Team *team = [[Team alloc] init];
-        team.name = [item objectForKey:@"name"];
-        team.info = [item objectForKey:@"info"];
-        team.teamId = [item objectForKey:@"teamId"];
-        team.deviceId = [item objectForKey:@"deviceId"];
-        team.people = [self getPeopleWithTeamId:team.teamId];
-        [teams addObject:team];
-    }
-    self.teams = teams;
-}
-
-- (NSArray *)getPeopleWithTeamId:(NSString *)teamId
-{
-    NSMutableArray *people = [NSMutableArray new];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Person" ofType:@"json"];
-    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error =  nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    NSArray *items = [json valueForKeyPath:@"Person"];
-    for (NSDictionary *item in items) {
-        NSString *tid = [item objectForKey:@"teamId"];
-        if([teamId isEqualToString:tid]){
-            Person *person = [[Person alloc] init];
-            person.teamId = tid;
-            person.name = [item objectForKey:@"name"];
-            person.info = [item objectForKey:@"info"];
-            person.phone= [item objectForKey:@"phone"];
-            person.email = [item objectForKey:@"email"];
-            person.image = [item objectForKey:@"image"];
-            person.gender = [item objectForKey:@"gender"];
-            [people addObject:person];
-        }
-    }
-    return people;
-}
-
 - (void)refresh
 {
     [_tableView reloadData];

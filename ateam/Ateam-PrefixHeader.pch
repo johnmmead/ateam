@@ -16,4 +16,7 @@
 #import "BeaconLists.h"
 #import "Sound.h"
 
+#import "Team.h"
+#import "Person.h"
+
 #endif
