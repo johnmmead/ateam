@@ -89,7 +89,7 @@ NSTimer *durationTimer;
         kActivityIndicatorHeight = 40.0f;
         self.subTitleY = 70.0f;
         self.subTitleHeight = 90.0f;
-        self.circleIconHeight = 20.0f;
+        self.circleIconHeight = 40.0f;
         self.windowWidth = 240.0f;
         self.windowHeight = 178.0f;
         self.shouldDismissOnTapOutside = NO;
@@ -771,6 +771,9 @@ NSTimer *durationTimer;
             iconImage  = [iconImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         }
         self.circleIconImageView.image = iconImage;
+        self.circleIconImageView.contentMode = UIViewContentModeScaleAspectFill;
+        self.circleIconImageView.layer.cornerRadius = 20;
+        self.circleIconImageView.clipsToBounds = YES;
     }
     
     for (UITextField *textField in _inputs)
