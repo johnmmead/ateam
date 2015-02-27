@@ -12,9 +12,12 @@ class Team: NSObject {
     var Name: String
     var Info: String
     var Url: String
-    init(name: String, info: String, url: String){
+    var DeviceUUID: String
+    
+    init(name: String, info: String, url: String, deviceUUID: String){
         Name=name
         Info=info
         Url=url
+        DeviceUUID=deviceUUID
     }
 }
