@@ -8,11 +8,14 @@
 
 #import "MainViewController.h"
 #import "Speecher.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
 @property (nonatomic, strong) NSArray *beaconsArray;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+
 @end
 
 @implementation MainViewController
@@ -21,9 +24,7 @@
 {
     [super viewDidLoad];
     [Sound nuk];
-    [Sound schwit];
-    [Sound ding];
-    [Sound ping];
+    [self playBackgroundMusic];
     
     //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
    // [Speecher speak:@"My name is Gann. You may remember me from such television specials as, learning to wakeboard." forGender:@"male"];
@@ -108,6 +109,18 @@
 - (void)beaconManagerDidStartAdvertising:(ESTBeaconManager *)manager error:(NSError *)error
 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)playBackgroundMusic
+{
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *filePath = [mainBundle pathForResource:@"ateam" ofType:@"mp3"];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+    NSError *error = nil;
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:fileData error:&error];
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer setVolume:0.2];
+    [self.audioPlayer play];
 }
 
 @end
