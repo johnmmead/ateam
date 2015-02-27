@@ -20,13 +20,6 @@ NSString *const TeamDescription = @"TeamDescription";
 
 @interface TeamViewController () <ProfileImageViewDelegate>
 
-BOOL showAddPhoto;
-BOOL showAddMemorial;
-BOOL showViewMemorial;
-BOOL showAll;
-
-@interface TeamViewController ()
-
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet GradientView *backgroundView;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile1View;
@@ -39,7 +32,12 @@ BOOL showAll;
 
 @end
 
-@implementation TeamViewController
+@implementation TeamViewController {
+    BOOL showAddPhoto;
+    BOOL showAddMemorial;
+    BOOL showViewMemorial;
+    BOOL showAll;
+}
 
 - (void)viewDidLoad
 {
