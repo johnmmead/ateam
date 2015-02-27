@@ -10,4 +10,8 @@
 
 @interface TeamViewController : UIViewController
 
+@property (nonatomic, strong) NSString *selectedDeviceId;
+
+-(void)refresh;
+
 @end

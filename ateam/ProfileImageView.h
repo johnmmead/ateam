@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
 
 @protocol ProfileImageViewDelegate;
 
@@ -14,6 +15,8 @@
 @property (nonatomic, weak) id<ProfileImageViewDelegate> delegate;
 @property (nonatomic, assign) BOOL goUp;
 @property (nonatomic, assign) NSTimeInterval duration;
+@property (strong, nonatomic) Person *person;
+
 @end
 
 @protocol ProfileImageViewDelegate <NSObject>
