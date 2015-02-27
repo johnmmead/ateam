@@ -246,4 +246,19 @@
     [self.audioPlayer play];
 }
 
+- (IBAction)didTapButton1:(id)sender
+{
+    
+}
+
+- (IBAction)didTapButton2:(id)sender
+{
+    
+}
+
+- (IBAction)didTapButton3:(id)sender
+{
+    
+}
+
 @end

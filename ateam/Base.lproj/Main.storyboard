@@ -41,16 +41,61 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a-team" translatesAutoresizingMaskIntoConstraints="NO" id="vcn-4e-fSN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-WV-MvF">
+                                <rect key="frame" x="16" y="488" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="CrA-Ae-geH"/>
+                                    <constraint firstAttribute="height" constant="60" id="RCO-37-kmf"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapButton1:" destination="UMc-8n-Fx3" eventType="touchUpInside" id="pxi-Td-rwO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWy-1x-kgX">
+                                <rect key="frame" x="130" y="488" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VLM-uR-XIe"/>
+                                    <constraint firstAttribute="width" constant="60" id="uOa-wR-YkL"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapButton2:" destination="UMc-8n-Fx3" eventType="touchUpInside" id="8fR-ig-Ooe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3z-p9-bv2">
+                                <rect key="frame" x="244" y="488" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2Fx-ik-Qr2"/>
+                                    <constraint firstAttribute="height" constant="60" id="ub2-yT-483"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapButton3:" destination="UMc-8n-Fx3" eventType="touchUpInside" id="X1d-ff-yqw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FOj-GI-vcd" secondAttribute="trailing" id="39w-kt-8Nt"/>
+                            <constraint firstItem="F3N-Fj-wuk" firstAttribute="top" secondItem="J9l-WV-MvF" secondAttribute="bottom" constant="20" id="49Z-9d-He4"/>
                             <constraint firstItem="vcn-4e-fSN" firstAttribute="leading" secondItem="pMz-g0-d9o" secondAttribute="leading" id="65k-jn-CN6"/>
                             <constraint firstItem="vcn-4e-fSN" firstAttribute="top" secondItem="pMz-g0-d9o" secondAttribute="top" id="Eua-V0-bIW"/>
+                            <constraint firstItem="F3N-Fj-wuk" firstAttribute="top" secondItem="YWy-1x-kgX" secondAttribute="bottom" constant="20" id="F9e-XJ-2Py"/>
+                            <constraint firstAttribute="trailing" secondItem="E3z-p9-bv2" secondAttribute="trailing" constant="16" id="Gzh-tF-Pyc"/>
                             <constraint firstAttribute="bottom" secondItem="FOj-GI-vcd" secondAttribute="bottom" id="IV8-FE-DOb"/>
                             <constraint firstItem="FOj-GI-vcd" firstAttribute="leading" secondItem="pMz-g0-d9o" secondAttribute="leading" id="Uoc-XN-pP4"/>
                             <constraint firstAttribute="trailing" secondItem="vcn-4e-fSN" secondAttribute="trailing" id="WaS-ax-cKc"/>
+                            <constraint firstAttribute="centerX" secondItem="YWy-1x-kgX" secondAttribute="centerX" id="aWp-GM-6av"/>
                             <constraint firstItem="vcn-4e-fSN" firstAttribute="bottom" secondItem="F3N-Fj-wuk" secondAttribute="top" id="apq-rJ-9m2"/>
+                            <constraint firstItem="J9l-WV-MvF" firstAttribute="leading" secondItem="pMz-g0-d9o" secondAttribute="leading" constant="16" id="eqo-UM-pEn"/>
+                            <constraint firstItem="F3N-Fj-wuk" firstAttribute="top" secondItem="E3z-p9-bv2" secondAttribute="bottom" constant="20" id="toz-gd-HSn"/>
                             <constraint firstItem="FOj-GI-vcd" firstAttribute="top" secondItem="pMz-g0-d9o" secondAttribute="top" id="vAq-FY-MT4"/>
                         </constraints>
                     </view>
