@@ -13,6 +13,7 @@
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
 @property (nonatomic, strong) NSArray *beaconsArray;
+@property (strong, nonatomic) NSString *previousBeaconIdentifier;
 @end
 
 @implementation MainViewController
@@ -97,7 +98,19 @@
 
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    ESTBeacon *closestBeacon = nil;
+    NSNumber *maxNumber = [NSNumber numberWithLong:LONG_MAX];
+    
+    for (ESTBeacon *b in beacons) {
+        if (b.distance < maxNumber) {
+            closestBeacon = b;
+            maxNumber = b.distance;
+        }
+    }
+    
+    if (closestBeacon && ![[closestBeacon.minor stringValue] isEqualToString:self.previousBeaconIdentifier]) {
+        [self flipPresentedViewController];
+    }
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager didStartMonitoringForRegion:(ESTBeaconRegion *)region
