@@ -9,9 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TeamViewController : UIViewController
-
-@property (nonatomic, strong) NSString *selectedDeviceId;
-
--(void)refresh;
-
+@property (nonatomic, strong) Team *selectedTeam;
 @end

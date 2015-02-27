@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *info;
 @property (strong, nonatomic) NSString *teamId;
-@property (strong, nonatomic) NSString *deviceId;
+@property (assign, nonatomic) NSUInteger deviceId;
 @property (strong, nonatomic) NSArray *people;
 
 @end
