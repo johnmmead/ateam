@@ -25,6 +25,7 @@ NSString *const TeamDescription = @"TeamDescription";
 @property (nonatomic, weak) IBOutlet UIImageView *profile3View;
 @property (nonatomic, weak) IBOutlet UIImageView *profile4View;
 @property (nonatomic, weak) IBOutlet UIImageView *profile5View;
+@property (weak, nonatomic) IBOutlet UIImageView *lowerRightImage;
 @property (nonatomic, strong) NSArray *tableData;
 @end
 
@@ -50,6 +51,8 @@ NSString *const TeamDescription = @"TeamDescription";
     [self styleProfileImageViews:@[_profile1View, _profile2View, _profile3View, _profile4View, _profile5View]];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    [self.lowerRightImage setImage:[UIImage imageNamed:@"image.png"]];
 }
 
 - (void)styleProfileImageViews:(NSArray *)imageViews;
@@ -109,5 +112,12 @@ NSString *const TeamDescription = @"TeamDescription";
 {
     return UIStatusBarStyleLightContent;
 }
+
+- (IBAction)alexTapped:(id)sender {
+    NSLog(@"alex tapped");
+}
+
+
+
 
 @end
