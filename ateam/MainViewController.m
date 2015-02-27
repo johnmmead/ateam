@@ -42,7 +42,11 @@
     self.beaconManager.delegate = self;
     self.beaconManager.returnAllRangedBeaconsAtOnce = YES;
     
+<<<<<<< HEAD
     self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"Estimote Devices"];
+=======
+    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:nil];
+>>>>>>> b4c9b4c2d7e593d97a7ae6f9923c6bec5de05fbc
     [self startRangingBeacons];
 }
 
@@ -73,30 +77,49 @@
     }
 }
 
+
 #pragma mark ESTBeaconManagerDelegate
 - (void)beaconManager:(ESTBeaconManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    [self startRangingBeacons];
-}
-
-- (void)beaconManager:(ESTBeaconManager *)manager rangingBeaconsDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
-{
     NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager monitoringDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
+- (void)beaconManager:(ESTBeaconManager *)manager didDetermineState:(CLRegionState)state forRegion:(ESTBeaconRegion *)region
 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
-}
-
-- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
-{
-    self.beaconsArray = beacons;
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
-    self.beaconsArray = beacons;
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+<<<<<<< HEAD
+=======
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager didEnterRegion:(ESTBeaconRegion *)region
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager didExitRegion:(ESTBeaconRegion *)region
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+>>>>>>> b4c9b4c2d7e593d97a7ae6f9923c6bec5de05fbc
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager didStartMonitoringForRegion:(ESTBeaconRegion *)region
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)beaconManagerDidStartAdvertising:(ESTBeaconManager *)manager error:(NSError *)error
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end
