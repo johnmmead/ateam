@@ -167,20 +167,19 @@ NSString *const TeamDescription = @"TeamDescription";
 
 - (void)showAlert
 {
-    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:blur];
-    blurView.translatesAutoresizingMaskIntoConstraints = NO;
-    blurView.alpha = 0;
+    UIView *darkness = [[UIView alloc] init];
+    darkness.backgroundColor = [UIColor blackColor];
+    darkness.alpha = 0;
+    darkness.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:darkness];
     
-    [self.view addSubview:blurView];
+    NSDictionary *views = NSDictionaryOfVariableBindings(darkness);
     
-    NSDictionary *views = NSDictionaryOfVariableBindings(blurView);
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[blurView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[blurView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[darkness]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[darkness]|" options:0 metrics:nil views:views]];
     
     [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
-        blurView.alpha = 1;
+        darkness.alpha = 1;
     } completion:nil];
     
     SCLAlertView *alert = [[SCLAlertView alloc] init];
@@ -191,9 +190,9 @@ NSString *const TeamDescription = @"TeamDescription";
     [alert showCustom:self image:nil color:[UIColor ateamRed] title:@"Title" subTitle:@"Subtitle" closeButtonTitle:@"Close" duration:0];
     [alert alertIsDismissed:^{
         [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
-            blurView.alpha = 0;
+            darkness.alpha = 0;
         } completion:^(BOOL finished) {
-            [blurView removeFromSuperview];
+            [darkness removeFromSuperview];
         }];
     }];
 }
