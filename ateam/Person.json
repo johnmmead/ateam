@@ -5,7 +5,7 @@
                "name": "John Mead",
                "phone": "415-203-7448",
                "email": "jmead@ancestry.com",
-               "info": "Hello, my name is John Mead, I am the team lead for team iOS west, and I like pancakes.",
+               "info": "Hello, my name is John Mead, I am the team leed for team iOS west, and I like pancakes.",
                "gender": "male",
                "image": "john_mead"
                },
@@ -41,7 +41,7 @@
                "name": "Michael Lawless",
                "phone": "925-285-4021",
                "email": "mlawless@ancestry.com",
-               "info": "Hi, my name is Michael Lawless. I'm the team lead, and I'm just waiting for baseball season to finally start.",
+               "info": "Hi, my name is Michael Lawless. I'm the product manager for iOS west.  just waiting for baseball season to finally start.",
                "gender": "male",
                "image": "michael_lawless"
                },
@@ -50,7 +50,7 @@
                "name": "Gann Bierner",
                "phone": "415-203-7448",
                "email": "jmead@ancestry.com",
-               "info": "Hello, my name is Gann. I am the one eveyone relentlessly nags about search results.",
+               "info": "Hello, my name is Gann. My favorite word is taxonomy. Taxonomy, taxonomy, taxonomy!",
                "gender": "male",
                "image": "gann_bierner"
                },
@@ -68,7 +68,7 @@
                "name": "Maxim Bolotin",
                "phone": "303-249-3098",
                "email": "rjennings@ancestry.com",
-               "info": "Hi, my name is Maxim Bolotin. I have the most amazaing collection of indie t-shirts ever assembled.",
+               "info": "Hi, my name is Maxim Bolotin. I have the most amazaing collection of t-shirts ever assembled.",
                "gender": "male",
                "image": "maxim_bolotin"
                },
@@ -104,7 +104,7 @@
                "name": "Bob Dowling",
                "phone": "213-370-3402",
                "email": "schen@ancestry.com",
-               "info": "Hi, my name is Bob. You might recognize me from such after school specials as pre colombian art for preschoolers.",
+               "info": "Hi, my name is Bob. You might recognize me from such after school specials as pre colombian art for preschoolers, and fancy cats for fancy men.",
                "gender": "male",
                "image": "bob_dowling"
                },
