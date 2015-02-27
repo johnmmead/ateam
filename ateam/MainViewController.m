@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "TeamViewController.h"
 #import "Speecher.h"
+#import "UIColor+ateam.h"
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
@@ -33,10 +34,13 @@
     [Sound ping];
     [self loadTeams];
     
+    self.view.backgroundColor = [UIColor ateamDarkestRed];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
     //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
    // [Speecher speak:@"My name is Gann. You may remember me from such television specials as, learning to wakeboard." forGender:@"male"];
     [self setupBeaconManager];
-    [self performSegueWithIdentifier:@"SegueToTeam" sender:self];
+//    [self performSegueWithIdentifier:@"SegueToTeam" sender:self];
 }
 
 - (void)loadTeams
