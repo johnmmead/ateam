@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Kwm-vl-9CM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -97,33 +97,33 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4l-BS-cXp">
                                             <rect key="frame" x="0.0" y="20" width="414" height="300"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alex_kudinov" translatesAutoresizingMaskIntoConstraints="NO" id="awT-1I-Wsx" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="awT-1I-Wsx" customClass="ProfileImageView">
                                                     <rect key="frame" x="70" y="30" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="90" id="JlC-wC-lQl"/>
                                                         <constraint firstAttribute="width" constant="90" id="fkR-jw-6WX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaurav_shetti" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-0o-P1D" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-0o-P1D" customClass="ProfileImageView">
                                                     <rect key="frame" x="274" y="65" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="MYw-9N-NUW"/>
                                                         <constraint firstAttribute="height" constant="90" id="O3D-qe-yGX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liam_molloy" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-5g-2pZ" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-5g-2pZ" customClass="ProfileImageView">
                                                     <rect key="frame" x="60" y="170" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Vxk-Xe-gov"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gann_bierner" translatesAutoresizingMaskIntoConstraints="NO" id="Exq-GQ-xUG" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Exq-GQ-xUG" customClass="ProfileImageView">
                                                     <rect key="frame" x="127" y="70" width="160" height="160"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="QLe-Ba-tpi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="max_bolotin" translatesAutoresizingMaskIntoConstraints="NO" id="2Sy-EB-Q5s" customClass="ProfileImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Sy-EB-Q5s" customClass="ProfileImageView">
                                                     <rect key="frame" x="244" y="195" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Xfo-Eu-uVT"/>
@@ -225,11 +225,6 @@
     </scenes>
     <resources>
         <image name="a-team" width="800" height="310"/>
-        <image name="alex_kudinov" width="240" height="240"/>
-        <image name="gann_bierner" width="240" height="240"/>
-        <image name="gaurav_shetti" width="240" height="240"/>
-        <image name="liam_molloy" width="240" height="240"/>
-        <image name="max_bolotin" width="240" height="240"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
