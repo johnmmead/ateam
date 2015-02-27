@@ -19,6 +19,14 @@ NSString *const TeamName = @"TeamName";
 NSString *const TeamDescription = @"TeamDescription";
 
 @interface TeamViewController () <ProfileImageViewDelegate>
+
+BOOL showAddPhoto;
+BOOL showAddMemorial;
+BOOL showViewMemorial;
+BOOL showAll;
+
+@interface TeamViewController ()
+
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet GradientView *backgroundView;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile1View;
@@ -27,8 +35,8 @@ NSString *const TeamDescription = @"TeamDescription";
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile4View;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile5View;
 @property (nonatomic, strong) NSArray *tableData;
-
 @property (nonatomic, assign) BOOL animate;
+
 @end
 
 @implementation TeamViewController
