@@ -12,7 +12,6 @@
 #import "TeamViewCell.h"
 #import "UIColor+ateam.h"
 #import "UIFont+ateam.h"
-#import "AwesomeMenu.h"
 
 NSString *const TeamName = @"TeamName";
 NSString *const TeamDescription = @"TeamDescription";
@@ -22,7 +21,7 @@ BOOL showAddMemorial;
 BOOL showViewMemorial;
 BOOL showAll;
 
-@interface TeamViewController () <AwesomeMenuDelegate>
+@interface TeamViewController ()
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet GradientView *backgroundView;
 @property (nonatomic, weak) IBOutlet UIImageView *profile1View;
@@ -31,7 +30,7 @@ BOOL showAll;
 @property (nonatomic, weak) IBOutlet UIImageView *profile4View;
 @property (nonatomic, weak) IBOutlet UIImageView *profile5View;
 @property (nonatomic, strong) NSArray *tableData;
-@property (strong, nonatomic) AwesomeMenu *menu;
+
 @end
 
 @implementation TeamViewController
@@ -52,7 +51,6 @@ BOOL showAll;
     [self styleProfileImageViews:@[_profile1View, _profile2View, _profile3View, _profile4View, _profile5View]];
     
     [self setNeedsStatusBarAppearanceUpdate];
-    [self setupAwesomeMenu];
 }
 
 - (void)styleProfileImageViews:(NSArray *)imageViews;
@@ -95,103 +93,6 @@ BOOL showAll;
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
-}
-
-- (void)setupAwesomeMenu
-{
-    AwesomeMenuItem *newPhotosMenuItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"NewPhotos.png"]
-                                                               highlightedImage:nil
-                                                                   ContentImage:nil
-                                                        highlightedContentImage:nil];
-    
-    AwesomeMenuItem *newMemorialsMenuItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"NewMemorials.png"]
-                                                                  highlightedImage:nil
-                                                                      ContentImage:nil
-                                                           highlightedContentImage:nil];
-    
-    AwesomeMenuItem *viewMemorialsMenuItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"ViewMemorials.png"]
-                                                                   highlightedImage:nil
-                                                                       ContentImage:nil
-                                                            highlightedContentImage:nil];
-    
-    AwesomeMenuItem *allMenuItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"All.png"]
-                                                         highlightedImage:nil
-                                                             ContentImage:nil
-                                                  highlightedContentImage:nil];
-    
-    NSArray *menus = [NSArray arrayWithObjects:newPhotosMenuItem, newMemorialsMenuItem, viewMemorialsMenuItem, allMenuItem, nil];
-    
-    AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Circle_Bkgrd.png"]
-                                                       highlightedImage:nil
-                                                           ContentImage:[UIImage imageNamed:@"PlusOnCircle.png"]
-                                                highlightedContentImage:nil];
-    
-//    self.menu = [[AwesomeMenu alloc] initWithFrame:CGRectZero startItem:startItem optionMenus:menus];
-    self.menu.delegate = self;
-    
-    self.menu.rotateAngle = 0.0;
-    self.menu.menuWholeAngle = M_PI/2;
-    self.menu.timeOffset = 0.04f;
-    
-    self.menu.farRadius = 140.0f;
-    self.menu.nearRadius = 100.0f;
-    self.menu.endRadius = 120.0f;
- //   self.menu.isPlayingEndAnimation = NO;
-    [self.view addSubview:self.menu];
-}
-
-- (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
-{
-    [self turnOffEverything];
-    switch (idx) {
-        case 0:
-            [Sound nuk];
-            showAddPhoto = YES;
-            //self.type = MGFilterTypePhoto;
-            break;
-        case 1:
-            [Sound nuk];
-            showAddMemorial = YES;
-            //self.type = MGFilterTypeMemorial;
-            break;
-        case 2:
-            [Sound nuk];
-            showViewMemorial = YES;
-            //self.type = MGFilterTypeViewMemorial;
-            break;
-        case 3:
-            [Sound nuk];
-            [self turnOnEverything];
-            //self.type = MGFilterTypeAll;
-            break;
-        default:
-            break;
-    }
-    
-}
-
-- (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu
-{
-}
-
-- (void)awesomeMenuDidFinishAnimationOpen:(AwesomeMenu *)menu
-{
-}
-
-- (void)turnOffEverything
-{
-    showAddPhoto = NO;
-    showAddMemorial = NO;
-    showViewMemorial = NO;
-    showAll = NO;
-}
-
-- (void)turnOnEverything
-{
-    showAddPhoto = YES;
-    showAddMemorial = YES;
-    showViewMemorial = YES;
-    showAll = YES;
 }
 
 @end
