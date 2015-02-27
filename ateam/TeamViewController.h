@@ -10,4 +10,6 @@
 
 @interface TeamViewController : UIViewController
 @property (nonatomic, strong) Team *selectedTeam;
+@property (assign, nonatomic) BOOL busy;
+
 @end

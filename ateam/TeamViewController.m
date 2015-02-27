@@ -155,12 +155,14 @@ NSString *const TeamDescription = @"TeamDescription";
 
 - (void)profileImageViewWasTapped:(ProfileImageView *)view
 {
-    [Speecher speak:view.person.info forGender:@"male"];
+    [Sound nuk];
+    [Speecher speak:view.person.info forGender:view.person.gender];
     [self showAlert];
 }
 
 - (void)showAlert
 {
+    self.busy = YES;
     UIView *darkness = [[UIView alloc] init];
     darkness.backgroundColor = [UIColor blackColor];
     darkness.alpha = 0;
@@ -183,6 +185,7 @@ NSString *const TeamDescription = @"TeamDescription";
     }];
     [alert showCustom:self image:nil color:[UIColor ateamRed] title:@"Title" subTitle:@"Subtitle" closeButtonTitle:@"Close" duration:0];
     [alert alertIsDismissed:^{
+        self.busy = NO;
         [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
             darkness.alpha = 0;
         } completion:^(BOOL finished) {
