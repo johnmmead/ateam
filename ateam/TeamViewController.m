@@ -182,6 +182,7 @@ NSString *const TeamDescription = @"TeamDescription";
     }];
     [alert showCustom:self image:[UIImage imageNamed:view.person.image] color:[UIColor ateamRed] title:@"Title" subTitle:@"Subtitle" closeButtonTitle:@"Close" duration:0];
     [alert alertIsDismissed:^{
+        self.busy = NO;
         [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
             darkness.alpha = 0;
         } completion:^(BOOL finished) {

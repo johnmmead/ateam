@@ -163,16 +163,16 @@
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
     ESTBeacon *closestBeacon = nil;
-    NSNumber *maxNumber = [NSNumber numberWithLong:LONG_MAX];
+    NSNumber *maxNumber = [NSNumber numberWithDouble:1000000.0];
     
     for (ESTBeacon *b in beacons) {
-        if (b.distance < maxNumber) {
+        if (b.distance.doubleValue < maxNumber.doubleValue) {
             closestBeacon = b;
             maxNumber = b.distance;
         }
     }
     
-    if (closestBeacon) {
+    if (closestBeacon && !self.teamViewController.busy) {
         Team *team = nil;
         for (Team *t in self.teamModels) {
             if (t.deviceId == closestBeacon.minor.integerValue) {
@@ -188,7 +188,7 @@
             
             __block BOOL isFirstLoad = self.backgroundImageView.alpha > 0;
             teamViewController.view.frame = self.teamViewController.view.frame;
-            teamViewController.view.alpha = 0.6;
+            teamViewController.view.alpha = 0.3;
             [teamViewController willMoveToParentViewController:self];
             [self addChildViewController:teamViewController];
             [teamViewController didMoveToParentViewController:self];
@@ -196,7 +196,7 @@
             void (^f)(void) = ^() {
                 [UIView animateWithDuration:1.2f animations:^{
                     teamViewController.view.alpha = 1.0f;
-                    self.teamViewController.view.alpha = 0.6;
+                    self.teamViewController.view.alpha = 0;
                 } completion:^(BOOL finished) {
                     teamViewController.view.alpha = 1.0f;
                 }];

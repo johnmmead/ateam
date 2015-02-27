@@ -34,6 +34,8 @@
     AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:phrase];
     utterance.rate = 0.23f;
     utterance.voice = voice;
+    utterance.preUtteranceDelay = 1.5;
+
     [synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryWord];
     [synthesizer speakUtterance:utterance];
 }
