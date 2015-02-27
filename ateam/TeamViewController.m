@@ -31,8 +31,6 @@ NSString *const TeamDescription = @"TeamDescription";
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile4View;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile5View;
 @property (nonatomic, strong) NSArray *tableData;
-@property (nonatomic, strong) NSArray *teams;
-@property (nonatomic, strong) Team *selectedTeam;
 @property (nonatomic, assign) BOOL animate;
 
 @end
@@ -47,16 +45,6 @@ NSString *const TeamDescription = @"TeamDescription";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self loadData]; //populates the teams property
-    if(!self.selectedDeviceId){self.selectedDeviceId = @"14501";} //whatever
-    
-    // set the selected team based on the device id
-    for(Team *team in self.teams){
-        if([team.deviceId isEqualToString:self.selectedDeviceId]){
-            self.selectedTeam = team;
-        }
-    }
     
     // populate the table
     _tableData = [NSArray arrayWithObjects:self.selectedTeam.name, self.selectedTeam.info, nil];

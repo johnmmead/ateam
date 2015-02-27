@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "TeamViewController.h"
 #import "Speecher.h"
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
@@ -169,7 +170,8 @@
         
         if (team != self.previousTeam) {
             self.previousTeam = team;
-//            [self presentViewController:nil animated:YES completion:nil];
+            TeamViewController *teamViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TeamViewControllerStoryboardIdentifier"];
+            teamViewController.selectedTeam = team;
         }
     }
 }
