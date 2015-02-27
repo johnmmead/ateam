@@ -31,6 +31,8 @@ NSString *const TeamDescription = @"TeamDescription";
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile4View;
 @property (nonatomic, weak) IBOutlet ProfileImageView *profile5View;
 @property (nonatomic, strong) NSArray *tableData;
+@property (nonatomic, strong) NSArray *teams;
+@property (nonatomic, strong) Team *selectedTeam;
 @property (nonatomic, assign) BOOL animate;
 
 @end
@@ -46,10 +48,18 @@ NSString *const TeamDescription = @"TeamDescription";
 {
     [super viewDidLoad];
     
-    [self loadData]; //jmead - build out Friday
-
-    _tableData = [NSArray arrayWithObjects:@"Search Team", @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis mauris placerat leo dignissim viverra. Quisque vehicula, metus ut luctus accumsan, justo dolor suscipit eros, vel rutrum arcu nunc nec arcu. Etiam bibendum dui nibh, ac varius turpis finibus vitae. Nam et auctor felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer non risus lobortis, iaculis nisi nec, pharetra elit.", nil];
+    [self loadData]; //populates the teams property
+    if(!self.selectedDeviceId){self.selectedDeviceId = @"14501";} //whatever
     
+    // set the selected team based on the device id
+    for(Team *team in self.teams){
+        if([team.deviceId isEqualToString:self.selectedDeviceId]){
+            self.selectedTeam = team;
+        }
+    }
+    
+    // populate the table
+    _tableData = [NSArray arrayWithObjects:self.selectedTeam.name, self.selectedTeam.info, nil];
     _animate = YES;
     
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -64,9 +74,7 @@ NSString *const TeamDescription = @"TeamDescription";
     NSArray *profiles = @[_profile1View, _profile2View, _profile3View, _profile4View, _profile5View];
     
     [self animateProfiles:profiles];
-    
     [self styleProfiles:profiles];
-    
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
@@ -76,7 +84,24 @@ NSString *const TeamDescription = @"TeamDescription";
     _animate = NO;
 }
 
+
+
 - (void)animateProfiles:(NSArray *)profiles
+{
+    _profile1View.goUp = NO;
+    _profile2View.goUp = YES;
+    _profile3View.goUp = NO;
+    _profile4View.goUp = NO;
+    _profile5View.goUp = NO;
+    for (unsigned i = 0; i < profiles.count; i++) {
+        ProfileImageView *view = profiles[i];
+        view.duration = 1.0 + ((arc4random() % 20)/10.0f);
+        [self toggleView:view];
+    }
+}
+
+
+- (void)populateProfiles:(NSArray *)profiles
 {
     _profile1View.goUp = NO;
     _profile2View.goUp = YES;
@@ -195,7 +220,7 @@ NSString *const TeamDescription = @"TeamDescription";
     }];
 }
 
-- (NSArray *)loadData{
+- (void)loadData{
     NSMutableArray *teams = [NSMutableArray new];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Team" ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
@@ -211,7 +236,7 @@ NSString *const TeamDescription = @"TeamDescription";
         team.people = [self getPeopleWithTeamId:team.teamId];
         [teams addObject:team];
     }
-    return teams;
+    self.teams = teams;
 }
 
 - (NSArray *)getPeopleWithTeamId:(NSString *)teamId
@@ -237,6 +262,11 @@ NSString *const TeamDescription = @"TeamDescription";
         }
     }
     return people;
+}
+
+- (void)refresh
+{
+    [_tableView reloadData];
 }
 
 @end
