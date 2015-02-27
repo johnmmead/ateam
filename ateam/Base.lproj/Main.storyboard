@@ -32,22 +32,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOj-GI-vcd" userLabel="teamContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <segue destination="dH4-qQ-mzW" kind="embed" identifier="TeamViewControllerSegueIdentifier" id="Krv-yJ-6Zl"/>
+                                </connections>
+                            </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a-team" translatesAutoresizingMaskIntoConstraints="NO" id="vcn-4e-fSN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FOj-GI-vcd" secondAttribute="trailing" id="39w-kt-8Nt"/>
                             <constraint firstItem="vcn-4e-fSN" firstAttribute="leading" secondItem="pMz-g0-d9o" secondAttribute="leading" id="65k-jn-CN6"/>
                             <constraint firstItem="vcn-4e-fSN" firstAttribute="top" secondItem="pMz-g0-d9o" secondAttribute="top" id="Eua-V0-bIW"/>
+                            <constraint firstAttribute="bottom" secondItem="FOj-GI-vcd" secondAttribute="bottom" id="IV8-FE-DOb"/>
+                            <constraint firstItem="FOj-GI-vcd" firstAttribute="leading" secondItem="pMz-g0-d9o" secondAttribute="leading" id="Uoc-XN-pP4"/>
                             <constraint firstAttribute="trailing" secondItem="vcn-4e-fSN" secondAttribute="trailing" id="WaS-ax-cKc"/>
                             <constraint firstItem="vcn-4e-fSN" firstAttribute="bottom" secondItem="F3N-Fj-wuk" secondAttribute="top" id="apq-rJ-9m2"/>
+                            <constraint firstItem="FOj-GI-vcd" firstAttribute="top" secondItem="pMz-g0-d9o" secondAttribute="top" id="vAq-FY-MT4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MY3-pb-fFQ">
                         <barButtonItem key="rightBarButtonItem" title="Team" id="60t-QJ-37g"/>
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="vcn-4e-fSN" id="Ucd-1i-qoo"/>
+                        <outlet property="teamContainerView" destination="FOj-GI-vcd" id="Kun-FU-Pha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCs-pt-lqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

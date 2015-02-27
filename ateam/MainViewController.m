@@ -12,15 +12,14 @@
 #import "UIColor+ateam.h"
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
+@property (weak, nonatomic) IBOutlet UIView *teamContainerView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) TeamViewController *teamViewController;
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
 @property (strong, nonatomic) ESTBeaconRegion *region;
-
 @property (strong, nonatomic) NSArray *beaconsArray;
 @property (strong, nonatomic) NSArray *teamModels;
-
 @property (strong, nonatomic) Team *previousTeam;
-
-
 @end
 
 @implementation MainViewController
@@ -125,6 +124,15 @@
     }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"TeamViewControllerSegueIdentifier"]) {
+        self.teamViewController = segue.destinationViewController;
+    } else {
+        [super prepareForSegue:segue sender:sender];
+    }
+}
+
 #pragma mark ESTBeaconManagerDelegate
 - (void)beaconManager:(ESTBeaconManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
@@ -171,11 +179,34 @@
                 break;
             }
         }
-        
+
         if (team != self.previousTeam) {
             self.previousTeam = team;
-            TeamViewController *teamViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TeamViewControllerStoryboardIdentifier"];
+            __block TeamViewController *teamViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TeamViewControllerStoryboardIdentifier"];
             teamViewController.selectedTeam = team;
+            
+            teamViewController.view.frame = self.teamViewController.view.frame;
+            [teamViewController willMoveToParentViewController:self];
+            [self addChildViewController:teamViewController];
+            [teamViewController didMoveToParentViewController:self];
+            [self.teamViewController willMoveToParentViewController:nil];
+            void (^f)(void) = ^() {
+                [self transitionFromViewController:self.teamViewController toViewController:teamViewController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:^(BOOL finished) {
+                    [teamViewController didMoveToParentViewController:self];
+                    [self.teamViewController didMoveToParentViewController:nil];
+                    self.teamViewController = teamViewController;
+                }];
+            };
+            if (self.backgroundImageView.alpha > 0) {
+                [UIView animateWithDuration:0.5 animations:^{
+                    self.backgroundImageView.alpha = 0.0;
+                } completion:^(BOOL finished) {
+                    self.backgroundImageView.alpha = 0.0;
+                    f();
+                }];
+            } else {
+                f();
+            }
         }
     }
 }

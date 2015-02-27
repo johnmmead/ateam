@@ -35,7 +35,7 @@ NSString *const TeamDescription = @"TeamDescription";
 
 @end
 
-@implementation TeamViewController 
+@implementation TeamViewController
 
 - (void)viewDidLoad
 {
