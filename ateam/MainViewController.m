@@ -182,46 +182,54 @@
                 break;
             }
         }
-
-        if (team != self.previousTeam) {
-            self.previousTeam = team;
-            __block TeamViewController *teamViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TeamViewControllerStoryboardIdentifier"];
-            teamViewController.selectedTeam = team;
-            
-            __block BOOL isFirstLoad = self.backgroundImageView.alpha > 0;
-            teamViewController.view.frame = self.teamViewController.view.frame;
-            teamViewController.view.alpha = 0.3;
-            [teamViewController willMoveToParentViewController:self];
-            [self addChildViewController:teamViewController];
-            [teamViewController didMoveToParentViewController:self];
-            [self.teamViewController willMoveToParentViewController:nil];
-            void (^f)(void) = ^() {
-                [UIView animateWithDuration:1.2f animations:^{
-                    teamViewController.view.alpha = 1.0f;
-                    self.teamViewController.view.alpha = 0;
-                } completion:^(BOOL finished) {
-                    teamViewController.view.alpha = 1.0f;
-                }];
-                
-                [self transitionFromViewController:self.teamViewController toViewController:teamViewController duration:0.8f options:(isFirstLoad ? UIViewAnimationOptionCurveEaseInOut: UIViewAnimationOptionTransitionFlipFromLeft) animations:nil completion:^(BOOL finished) {
-                    [teamViewController didMoveToParentViewController:self];
-                    [self.teamViewController didMoveToParentViewController:nil];
-                    self.teamViewController = teamViewController;
-                }];
-            };
-            
-            if (isFirstLoad) {
-                [UIView animateWithDuration:0.6f animations:^{
-                    self.backgroundImageView.alpha = 0.0;
-                } completion:^(BOOL finished) {
-                    self.backgroundImageView.alpha = 0.0;
-                    f();
-                }];
-            } else {
-                f();
-            }
+        
+        if (team) {
+            [self presentTeam:team];
         }
     }
+}
+
+- (void)presentTeam:(Team *)team
+{
+    if (team != self.previousTeam) {
+        self.previousTeam = team;
+        __block TeamViewController *teamViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TeamViewControllerStoryboardIdentifier"];
+        teamViewController.selectedTeam = team;
+        
+        __block BOOL isFirstLoad = self.backgroundImageView.alpha > 0;
+        teamViewController.view.frame = self.teamViewController.view.frame;
+        teamViewController.view.alpha = 0.3;
+        [teamViewController willMoveToParentViewController:self];
+        [self addChildViewController:teamViewController];
+        [teamViewController didMoveToParentViewController:self];
+        [self.teamViewController willMoveToParentViewController:nil];
+        void (^f)(void) = ^() {
+            [UIView animateWithDuration:1.2f animations:^{
+                teamViewController.view.alpha = 1.0f;
+                self.teamViewController.view.alpha = 0;
+            } completion:^(BOOL finished) {
+                teamViewController.view.alpha = 1.0f;
+            }];
+            
+            [self transitionFromViewController:self.teamViewController toViewController:teamViewController duration:0.8f options:(isFirstLoad ? UIViewAnimationOptionCurveEaseInOut: UIViewAnimationOptionTransitionFlipFromLeft) animations:nil completion:^(BOOL finished) {
+                [teamViewController didMoveToParentViewController:self];
+                [self.teamViewController didMoveToParentViewController:nil];
+                self.teamViewController = teamViewController;
+            }];
+        };
+        
+        if (isFirstLoad) {
+            [UIView animateWithDuration:0.6f animations:^{
+                self.backgroundImageView.alpha = 0.0;
+            } completion:^(BOOL finished) {
+                self.backgroundImageView.alpha = 0.0;
+                f();
+            }];
+        } else {
+            f();
+        }
+    }
+
 }
 
 - (void)beaconManager:(ESTBeaconManager *)manager didStartMonitoringForRegion:(ESTBeaconRegion *)region
@@ -248,17 +256,53 @@
 
 - (IBAction)didTapButton1:(id)sender
 {
+    //    @"14501";
+    Team *team = nil;
     
+    for (Team *t in self.teamModels) {
+        if (t.deviceId == 14501) {
+            break;
+        }
+    }
+    
+    if (team) {
+        [self presentTeam:team];
+    }
 }
 
 - (IBAction)didTapButton2:(id)sender
 {
+//    @"14503";
     
+    Team *team = nil;
+    
+    for (Team *t in self.teamModels) {
+        if (t.deviceId == 14503) {
+            break;
+        }
+    }
+    
+    if (team) {
+        [self presentTeam:team];
+    }
 }
 
 - (IBAction)didTapButton3:(id)sender
 {
+//     @"14502";
+
+    Team *team = nil;
     
+    for (Team *t in self.teamModels) {
+        if (t.deviceId == 14502) {
+            break;
+        }
+    }
+    
+    if (team) {
+        [self presentTeam:team];
+    }
+
 }
 
 @end
