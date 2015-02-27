@@ -10,12 +10,18 @@
 #import "TeamViewController.h"
 #import "Speecher.h"
 #import <AVFoundation/AVFoundation.h>
+#import "UIColor+ateam.h"
 
 @interface MainViewController () < ESTBeaconManagerDelegate >
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
 @property (nonatomic, strong) NSArray *beaconsArray;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+
+@property (strong, nonatomic) NSArray *teamModels;
+
+@property (strong, nonatomic) Team *previousTeam;
+
 
 @end
 
@@ -26,6 +32,11 @@
     [super viewDidLoad];
     [Sound nuk];
     [self playBackgroundMusic];
+
+    [self loadTeams];
+    
+    self.view.backgroundColor = [UIColor ateamDarkestRed];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
    // [Speecher speak:@"My name is Gann. You may remember me from such television specials as, learning to wakeboard." forGender:@"male"];

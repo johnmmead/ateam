@@ -16,6 +16,7 @@
 #import "UIFont+ateam.h"
 #import "Team.h"
 #import "Person.h"
+#import "Speecher.h"
 
 NSString *const TeamName = @"TeamName";
 NSString *const TeamDescription = @"TeamDescription";
@@ -82,22 +83,9 @@ NSString *const TeamDescription = @"TeamDescription";
     _profile4View.goUp = NO;
     _profile5View.goUp = NO;
     for (unsigned i = 0; i < profiles.count; i++) {
+        Person *person = self.selectedTeam.people[i];
         ProfileImageView *view = profiles[i];
-        view.duration = 1.0 + ((arc4random() % 20)/10.0f);
-        [self toggleView:view];
-    }
-}
-
-
-- (void)populateProfiles:(NSArray *)profiles
-{
-    _profile1View.goUp = NO;
-    _profile2View.goUp = YES;
-    _profile3View.goUp = NO;
-    _profile4View.goUp = NO;
-    _profile5View.goUp = NO;
-    for (unsigned i = 0; i < profiles.count; i++) {
-        ProfileImageView *view = profiles[i];
+        view.person = person;
         view.duration = 1.0 + ((arc4random() % 20)/10.0f);
         [self toggleView:view];
     }
@@ -172,6 +160,8 @@ NSString *const TeamDescription = @"TeamDescription";
 
 - (void)profileImageViewWasTapped:(ProfileImageView *)view
 {
+    [Speecher speak:@"My name is Gann. You may remember me from such television specials as, learning to wakeboard." forGender:@"male"];
+
     [self showAlert];
 }
 
