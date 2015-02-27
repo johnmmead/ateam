@@ -1,0 +1,22 @@
+{
+    "Team": [
+               {
+               "teamId": "1",
+               "name": "iOS West",
+               "info": "Hello! And welcome to the iOS west team. We are one of three iOS teams at Ancestry, but the first on the West Coast. Most of us were origially hired as part of the Find A Grave acquistion. We have an amazing view of your 3 time world champion San Francisco Giants!",
+               "deviceId": "14501"
+               },
+             {
+               "teamId": "2",
+             "name": "Solr Search",
+             "info": "Howdy! Glad you stopped by. We are the Solr search team and we are a particularly cheerful group, and almost entirely friendly to strangers so please do not hestitate to stop by and shoot the breeze. In fact, if you do stop by, please bring a bag of tacos with you!",
+             "deviceId": "14502"
+             },
+             {
+               "teamId": "3",
+             "name": "Hito",
+             "info": "We believe we are working on aggregate person, which suits our secretive and reclusive nature, but we love our work. Well, we love our work, but we truly love our neighbors. In fact, we consider ourselves to be wildly fortunate to have iOS West right next to us. My goodness they are one handsome team!",
+             "deviceId": "14503"
+             },
+             ]
+}

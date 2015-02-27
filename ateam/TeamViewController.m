@@ -14,6 +14,8 @@
 #import "TeamViewCell.h"
 #import "UIColor+ateam.h"
 #import "UIFont+ateam.h"
+#import "Team.h"
+#import "Person.h"
 
 NSString *const TeamName = @"TeamName";
 NSString *const TeamDescription = @"TeamDescription";
@@ -44,6 +46,8 @@ NSString *const TeamDescription = @"TeamDescription";
 {
     [super viewDidLoad];
     
+    [self loadData]; //jmead - build out Friday
+
     _tableData = [NSArray arrayWithObjects:@"Search Team", @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis mauris placerat leo dignissim viverra. Quisque vehicula, metus ut luctus accumsan, justo dolor suscipit eros, vel rutrum arcu nunc nec arcu. Etiam bibendum dui nibh, ac varius turpis finibus vitae. Nam et auctor felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer non risus lobortis, iaculis nisi nec, pharetra elit.", nil];
     
     _animate = YES;
@@ -127,7 +131,7 @@ NSString *const TeamDescription = @"TeamDescription";
     cell.label.textColor = indexPath.row == 0 ? [UIColor ateamRed] : [UIColor whiteColor];
     cell.label.font = indexPath.row == 0 ? [UIFont exoLightFontOfSize:40] : [UIFont exoMediumFontOfSize:16];
     cell.label.shadowColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.25];
-    cell.label.shadowOffset = CGSizeMake(0, 10);
+    
     return cell;
 }
 
@@ -189,6 +193,50 @@ NSString *const TeamDescription = @"TeamDescription";
             [blurView removeFromSuperview];
         }];
     }];
+}
+
+- (NSArray *)loadData{
+    NSMutableArray *teams = [NSMutableArray new];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Team" ofType:@"json"];
+    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error =  nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    NSArray *items = [json valueForKeyPath:@"Team"];
+    for (NSDictionary *item in items) {
+        Team *team = [[Team alloc] init];
+        team.name = [item objectForKey:@"name"];
+        team.info = [item objectForKey:@"info"];
+        team.teamId = [item objectForKey:@"teamId"];
+        team.deviceId = [item objectForKey:@"deviceId"];
+        team.people = [self getPeopleWithTeamId:team.teamId];
+        [teams addObject:team];
+    }
+    return teams;
+}
+
+- (NSArray *)getPeopleWithTeamId:(NSString *)teamId
+{
+    NSMutableArray *people = [NSMutableArray new];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Person" ofType:@"json"];
+    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error =  nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    NSArray *items = [json valueForKeyPath:@"Person"];
+    for (NSDictionary *item in items) {
+        NSString *tid = [item objectForKey:@"teamId"];
+        if([teamId isEqualToString:tid]){
+            Person *person = [[Person alloc] init];
+            person.teamId = tid;
+            person.name = [item objectForKey:@"name"];
+            person.info = [item objectForKey:@"info"];
+            person.phone= [item objectForKey:@"phone"];
+            person.email = [item objectForKey:@"email"];
+            person.image = [item objectForKey:@"image"];
+            person.gender = [item objectForKey:@"gender"];
+            [people addObject:person];
+        }
+    }
+    return people;
 }
 
 @end
