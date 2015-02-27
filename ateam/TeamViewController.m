@@ -160,8 +160,7 @@ NSString *const TeamDescription = @"TeamDescription";
 
 - (void)profileImageViewWasTapped:(ProfileImageView *)view
 {
-    [Speecher speak:@"My name is Gann. You may remember me from such television specials as, learning to wakeboard." forGender:@"male"];
-
+    [Speecher speak:view.person.info forGender:@"male"];
     [self showAlert];
 }
 
