@@ -32,6 +32,7 @@
 		07859F381A9FABD200196780 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07859F371A9FABD200196780 /* GradientView.m */; };
 		96D2EA2476D7B06E7B27F91F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7250CFF1DB8BEE1C67DC0A /* libPods.a */; };
 		9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B2A31A9FAA550017DE80 /* MainViewController.m */; };
+		9CB02FC01A9FE92800E61DFE /* ESTBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB02FBF1A9FE92800E61DFE /* ESTBeaconTableVC.m */; };
 		A86DB4431A9FC58100A88647 /* Speecher.m in Sources */ = {isa = PBXBuildFile; fileRef = A86DB4421A9FC58100A88647 /* Speecher.m */; };
 		A86DB4461A9FC5CD00A88647 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86DB4451A9FC5CD00A88647 /* AVFoundation.framework */; };
 		A86DB44E1A9FCCDC00A88647 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = A86DB44A1A9FCCDC00A88647 /* ding.wav */; };
@@ -91,6 +92,8 @@
 		9C12B2A31A9FAA550017DE80 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		9C12B2A51A9FAA950017DE80 /* Ateam-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ateam-PrefixHeader.pch"; sourceTree = "<group>"; };
 		9C12B2A61A9FAC810017DE80 /* BeaconLists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconLists.h; sourceTree = "<group>"; };
+		9CB02FBE1A9FE92800E61DFE /* ESTBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconTableVC.h; sourceTree = "<group>"; };
+		9CB02FBF1A9FE92800E61DFE /* ESTBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBeaconTableVC.m; sourceTree = "<group>"; };
 		A86DB4411A9FC58100A88647 /* Speecher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speecher.h; sourceTree = "<group>"; };
 		A86DB4421A9FC58100A88647 /* Speecher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speecher.m; sourceTree = "<group>"; };
 		A86DB4451A9FC5CD00A88647 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -182,6 +185,8 @@
 		07859F401A9FAE3B00196780 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9CB02FBE1A9FE92800E61DFE /* ESTBeaconTableVC.h */,
+				9CB02FBF1A9FE92800E61DFE /* ESTBeaconTableVC.m */,
 				9C12B2A21A9FAA550017DE80 /* MainViewController.h */,
 				9C12B2A31A9FAA550017DE80 /* MainViewController.m */,
 				07823A4A1A9FB4DF00AB8C8B /* TeamViewController.h */,
@@ -357,6 +362,11 @@
 				TargetAttributes = {
 					A88D5C881A9F9E2800E5A1B9 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A88D5CA11A9F9E2800E5A1B9 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -468,6 +478,7 @@
 				07823A4C1A9FB4DF00AB8C8B /* TeamViewController.m in Sources */,
 				A88D5C921A9F9E2800E5A1B9 /* AppDelegate.m in Sources */,
 				A86DB4431A9FC58100A88647 /* Speecher.m in Sources */,
+				9CB02FC01A9FE92800E61DFE /* ESTBeaconTableVC.m in Sources */,
 				A86DB4551A9FCE3700A88647 /* Sound.m in Sources */,
 				9C12B2A41A9FAA550017DE80 /* MainViewController.m in Sources */,
 				07823A761A9FC5C000AB8C8B /* UIFont+ateam.m in Sources */,
