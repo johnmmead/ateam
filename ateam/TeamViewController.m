@@ -18,10 +18,12 @@
 #import "Person.h"
 #import "Speecher.h"
 
+#import <MessageUI/MFMailComposeViewController.h>
+
 NSString *const TeamName = @"TeamName";
 NSString *const TeamDescription = @"TeamDescription";
 
-@interface TeamViewController () <ProfileImageViewDelegate>
+@interface TeamViewController () <ProfileImageViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet GradientView *backgroundView;
@@ -62,13 +64,10 @@ NSString *const TeamDescription = @"TeamDescription";
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)dealloc
 {
-    [super viewWillDisappear:animated];
     _animate = NO;
 }
-
-
 
 - (void)animateProfiles:(NSArray *)profiles
 {
@@ -177,12 +176,18 @@ NSString *const TeamDescription = @"TeamDescription";
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     alert.backgroundType = Transparent;
     [alert addButton:@"Email" actionBlock:^{
-        
+        MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+        controller.mailComposeDelegate = self;
+        [controller setToRecipients:@[view.person.email]];
+        [controller setSubject:@"Greeting from the A-Team!!"];
+        [controller setMessageBody:@"" isHTML:NO];
+        if (controller) [self presentViewController:controller animated:YES completion:nil];
     }];
     [alert addButton:@"Call" actionBlock:^{
-        
+        NSString *phoneNumber = [@"telprompt://" stringByAppendingString:view.person.phone];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
     }];
-    [alert showCustom:self image:[UIImage imageNamed:view.person.image] color:[UIColor ateamRed] title:@"Title" subTitle:@"Subtitle" closeButtonTitle:@"Close" duration:0];
+    [alert showCustom:self image:[UIImage imageNamed:view.person.image] color:[UIColor ateamRed] title:view.person.name subTitle:@"" closeButtonTitle:@"Close" duration:0];
     [alert alertIsDismissed:^{
         self.busy = NO;
         [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
@@ -191,6 +196,16 @@ NSString *const TeamDescription = @"TeamDescription";
             [darkness removeFromSuperview];
         }];
     }];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error;
+{
+    if (result == MFMailComposeResultSent) {
+        NSLog(@"It's away!");
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)refresh

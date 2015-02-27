@@ -89,7 +89,7 @@ NSTimer *durationTimer;
         kActivityIndicatorHeight = 40.0f;
         self.subTitleY = 70.0f;
         self.subTitleHeight = 90.0f;
-        self.circleIconHeight = 40.0f;
+        self.circleIconHeight = 60.0f;
         self.windowWidth = 240.0f;
         self.windowHeight = 178.0f;
         self.shouldDismissOnTapOutside = NO;
@@ -651,7 +651,7 @@ NSTimer *durationTimer;
         case Custom:
             viewColor = color;
             iconImage = image;
-            self.circleIconHeight *= 2.0f;
+//            self.circleIconHeight *= 2.0f;
             break;
     }
     
@@ -772,7 +772,7 @@ NSTimer *durationTimer;
         }
         self.circleIconImageView.image = iconImage;
         self.circleIconImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.circleIconImageView.layer.cornerRadius = 20;
+        self.circleIconImageView.layer.cornerRadius = 30;
         self.circleIconImageView.clipsToBounds = YES;
     }
     
