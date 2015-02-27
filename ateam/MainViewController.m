@@ -261,6 +261,7 @@
     
     for (Team *t in self.teamModels) {
         if (t.deviceId == 14501) {
+            team = t;
             break;
         }
     }
@@ -278,6 +279,7 @@
     
     for (Team *t in self.teamModels) {
         if (t.deviceId == 14503) {
+            team = t;
             break;
         }
     }
@@ -295,6 +297,7 @@
     
     for (Team *t in self.teamModels) {
         if (t.deviceId == 14502) {
+            team = t;
             break;
         }
     }
