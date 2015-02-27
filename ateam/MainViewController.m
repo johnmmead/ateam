@@ -173,7 +173,7 @@
         }
     }
     
-    if (closestBeacon && !self.teamViewController.busy) {
+    if (closestBeacon && closestBeacon.distance.doubleValue < 0.8f && !self.teamViewController.busy) {
         Team *team = nil;
         for (Team *t in self.teamModels) {
             if (t.deviceId == closestBeacon.minor.integerValue) {
