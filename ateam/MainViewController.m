@@ -9,8 +9,6 @@
 #import "MainViewController.h"
 #import "Speecher.h"
 
-#import "ESTBeaconTableVC.h"
-
 @interface MainViewController () < ESTBeaconManagerDelegate >
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
@@ -26,6 +24,7 @@
     [Sound schwit];
     [Sound ding];
     [Sound ping];
+    
     //[Speecher speak:@"My name is Luca. I live on the second floor." forGender:@"female"];
    // [Speecher speak:@"My name is Gann. You may remember me from such television specials as, learning to wakeboard." forGender:@"male"];
     [self setupBeaconManager];
@@ -37,11 +36,11 @@
     self.beaconManager.delegate = self;
     self.beaconManager.returnAllRangedBeaconsAtOnce = YES;
     
-    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:nil];
+    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"Estimote Devices"];
     [self startRangingBeacons];
 }
 
--(void)startRangingBeacons
+- (void)startRangingBeacons
 {
     if ([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
