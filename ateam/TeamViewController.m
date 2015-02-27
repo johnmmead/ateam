@@ -157,11 +157,7 @@ NSString *const TeamDescription = @"TeamDescription";
 {
     [Sound nuk];
     [Speecher speak:view.person.info forGender:view.person.gender];
-    [self showAlert];
-}
 
-- (void)showAlert
-{
     self.busy = YES;
     UIView *darkness = [[UIView alloc] init];
     darkness.backgroundColor = [UIColor blackColor];
@@ -183,7 +179,10 @@ NSString *const TeamDescription = @"TeamDescription";
     [alert addButton:@"Email" actionBlock:^{
         
     }];
-    [alert showCustom:self image:nil color:[UIColor ateamRed] title:@"Title" subTitle:@"Subtitle" closeButtonTitle:@"Close" duration:0];
+    [alert addButton:@"Call" actionBlock:^{
+        
+    }];
+    [alert showCustom:self image:[UIImage imageNamed:view.person.image] color:[UIColor ateamRed] title:@"Title" subTitle:@"Subtitle" closeButtonTitle:@"Close" duration:0];
     [alert alertIsDismissed:^{
         self.busy = NO;
         [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
